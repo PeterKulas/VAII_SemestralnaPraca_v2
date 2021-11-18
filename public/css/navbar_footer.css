@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b1d4e0 !important;
+    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+}
+
+.remove-mp {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/**********Navbar styles**********/
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:active,
+.navbar a:focus,
+.navbar a:hover {
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bi {
+    color: white;
+}
+
+.collapse {
+    justify-content: flex-end;
+    background-color: #0c2d48;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-family: cursive, sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2rem;
+}
+
+.nav-item,
+.navbar-brand {
+    color: white;
+    font-size: large;
+}
+
+.nav-item:active,
+.nav-item:active {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin-right: 15px;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.navbar,
+.footer {
+    background-color: #0c2d48;
+    padding: 10px;
+}
+
+.footer {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login span {
+    font-size: xx-small;
+    color: white;
+}
+
+.login span:active,
+.login span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

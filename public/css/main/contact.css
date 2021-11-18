@@ -1,0 +1,88 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+/***** Contact information *****/
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(12, 12, 112);
+    box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    color: white;
+    padding: 2vw;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+.contact-info h4 {
+    margin-bottom: 1.8vw;
+    font-weight: bold;
+}
+.contact-info li {
+    margin-bottom: 2vw;
+    font-size: 120%;
+}
+
+.ci-footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 140%;
+}
+
+.ci-footer i {
+    cursor: pointer;
+}
+
+.contact-btn {
+    width: 100%;
+    background-color: #54a1d4;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 150%;
+}
+
+.contact-btn:hover,
+.contact-btn:active {
+    cursor: pointer;
+    background-color: rgb(12, 12, 112);
+}
+
+/***** Form *****/
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    background-color: white;
+    border-radius: 2vw;
+    padding: 2vw;
+}
+
+.contact-form span {
+    color: black;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    font-size: 120%;
+    background-color: #f8f8f8;
+    border: none;
+    margin: 1px;
+}
+
+@media only screen and (max-width: 800px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
