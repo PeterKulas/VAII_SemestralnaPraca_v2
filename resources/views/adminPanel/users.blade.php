@@ -14,8 +14,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Meno</th>
                 <th scope="col">Priezvisko</th>
-                <th scope="col">Email</th>
                 <th scope="col">Heslo</th>
+                <th scope="col">Email</th>
                 <th scope="col">Dátum registrácie</th>
                 <th scope="col">Operacia</th>
             </tr>
