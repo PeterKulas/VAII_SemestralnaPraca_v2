@@ -1,0 +1,72 @@
+.maincontent {
+    padding-top: 50px;
+    padding-left: 20%;
+}
+
+.sidebar {
+    background-color: #145da0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.sidebar h4 {
+    color: white;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+}
+
+a {
+    color: rgba(253, 250, 250, 0.959);
+}
+
+.operation {
+    font-size: 20px;
+}
+
+.operation:hover,
+.operation:active {
+    cursor: pointer;
+    font-weight: bold;
+}
+.edit {
+    color: green;
+}
+
+.delete {
+    color: red;
+}
+
+.theme-box {
+    display: flex;
+    font-weight: bold;
+    border: none;
+}
+
+.theme-btn {
+    width: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.active {
+    background-color: yellow;
+}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+}

@@ -26,3 +26,13 @@ Route::get('/contact', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+
+/*Admin panel */
+Route::get('/adminPanel/users', function () {
+    return view('adminPanel/users');
+});
+
+Route::get('/adminPanel/books', function () {
+    return view('adminPanel/books');
+});
