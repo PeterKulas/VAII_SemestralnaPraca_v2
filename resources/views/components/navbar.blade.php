@@ -16,8 +16,7 @@
                             <div class="login ">
                                 <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Prihlásiť
                                     sa</button>
-                                <span><a href="registrationPage">Nemáš vytvorený učet?
-                                        Registruj sa!</a></span>
+                                <span><a href="registrationPage">Nemáš vytvorený učet? Registruj sa!</a></span>
                             </div>
                         </li>
                     </ul>
