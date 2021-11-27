@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,9 @@ Route::get('/register', function () {
 
 /*Admin panel */
 Route::get('/adminPanel/users', function () {
-    return view('adminPanel/users');
+    return view('adminPanel/users', [
+        'users' => User::all()
+    ]);
 });
 
 Route::get('/adminPanel/books', function () {

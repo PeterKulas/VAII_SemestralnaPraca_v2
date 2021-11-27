@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div class="col-sm-10 maincontent">
+<div class="col-sm-11 maincontent">
     <h2>Zoznam kníh</h2>
     <hr>
     <table class="table table-striped">
@@ -20,9 +20,10 @@
                 <th scope="col">Operacia</th>
             </tr>
         </thead>
+
         <tbody>
             <tr>
-                <th scope="row"></th>
+                <td scope="row"></td>
                 <td></td>
                 <td></td>
                 <td></td>
