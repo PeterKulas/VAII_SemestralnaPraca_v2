@@ -10,7 +10,10 @@
             <h5 class="title">Registrácia</h5>
         </div>
         <div class="modal-body">
-            <form action="/includes/register.inc.php" method="post">
+            <form action="/register" method="POST">
+                <!-- schova form  -->
+                @csrf
+
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">

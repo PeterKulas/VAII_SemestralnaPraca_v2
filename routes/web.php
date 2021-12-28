@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -24,10 +25,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
 
+/*Registration */
+Route::get('register', [RegisterController::class, 'getView']);
+Route::post('register', [RegisterController::class, 'storeUser']);
 
 /*Admin panel */
 Route::get('/adminPanel/users', function () {

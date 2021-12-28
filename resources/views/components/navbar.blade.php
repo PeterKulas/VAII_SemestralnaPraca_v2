@@ -17,7 +17,7 @@
                                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                                     data-bs-target="#loginModal">Prihlásiť
                                     sa</button>
-                                <span><a href="registrationPage">Nemáš vytvorený učet? Registruj sa!</a></span>
+                                <span><a href="register">Nemáš vytvorený učet? Registruj sa!</a></span>
                             </div>
                         </li>
                     </ul>
