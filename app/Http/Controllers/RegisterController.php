@@ -22,6 +22,8 @@ class RegisterController extends Controller
         'email' => ['required', 'email'] 
     ]);
 
+    $formInput['password'] = bcrypt($formInput['password']);
+
     User::create($formInput);
 
     return redirect('/');
