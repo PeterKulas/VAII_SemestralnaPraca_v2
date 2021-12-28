@@ -26,13 +26,14 @@ body {
     text-decoration: none;
 }
 
-.navbar a:active,
+/*.navbar a:active,
 .navbar a:focus,
 .navbar a:hover {
     color: white;
     cursor: pointer;
     font-weight: bold;
 }
+*/
 
 .bi {
     color: white;

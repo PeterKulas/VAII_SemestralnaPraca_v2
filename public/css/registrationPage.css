@@ -1,0 +1,15 @@
+.title {
+    font-weight: bold;
+}
+
+#passMsg,
+#emailMsg,
+#firstnameValidation,
+#lastnameValidation {
+    color: #696969;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none;
+}

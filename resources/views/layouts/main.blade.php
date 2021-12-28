@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/main/about.css">
     <link rel="stylesheet" href="css/main/contact.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
+    <link rel="stylesheet" href="css/registrationPage.css">
 
     <title>BookRent - @yield('title')</title>
 </head>
