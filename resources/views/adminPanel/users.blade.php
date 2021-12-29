@@ -1,12 +1,12 @@
 @extends('layouts.adminPanel')
 
-@section('title', 'Pouzivatelia')
+@section('title', 'Autori')
 
 
 @section('content')
 
 <div class="col-sm-11 maincontent">
-    <h2>Používatelia</h2>
+    <h2>Autori</h2>
     <hr>
     <table class="table table-striped">
         <thead>

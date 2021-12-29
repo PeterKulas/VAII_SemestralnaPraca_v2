@@ -16,7 +16,6 @@ class SessionsController extends Controller
     public function loginUser() {
 
        $formInput = request()->validate([
-            // 'email' => ['required', 'email','exists:users,email'],
             'email' => ['required', 'exists:users,email', 'email'],
             'password' => ['required', "min:8"]
         ]);

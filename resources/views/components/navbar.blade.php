@@ -9,9 +9,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav" style="padding-top: 0px; padding-bottom: 0px;">
                     <ul class="navbar-nav">
+
+                        @auth
+                        @if(auth()->user()->firstname === "Admin" )
+                        <li class="nav-item"><a href="/adminPanel/users">AdminPanel</a></li>
+                        @endif
+                        @endauth
+
+
                         <li class="nav-item"><a href="/">Domov</a></li>
+
+                        @guest
                         <li class="nav-item"><a href="/about">O nás</a></li>
                         <li class="nav-item"><a href="/contact">Kontakt</a></li>
+                        @endguest
 
                         @auth
                         <div class="logout">
