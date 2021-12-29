@@ -27,9 +27,6 @@ class RegisterController extends Controller
     $user = User::create($formInput);
     session()->flash('success', 'Úspešne si sa zaregistroval!');
 
-    //Login user
-    //auth()->login($user);
-
    return view("register/registration");
 }
 

@@ -34,23 +34,9 @@ Route::get('register', [RegisterController::class, 'getView'])->middleware('gues
 Route::post('register', [RegisterController::class, 'storeUser'])->middleware('guest');
 
 /*Admin panel */
-Route::get('/adminPanel/users', function () {
-    return view('adminPanel/users', [
-        'users' => User::all()
-    ]);
-});
-
-Route::get('/adminPanel/books', function () {
-    return view('adminPanel/books');
-});
-
-Route::get('/adminPanel/authors', function () {
-    return view('adminPanel/authors', [
-        'authors' => Author::all()
-    ]);
-});
-
-//Route::get('adminPanel/authors', [AdminPanelController::class, 'getViewAuthors']);
+Route::get('/adminPanel/users', [AdminPanelController::class, 'getUsers']);
+Route::get('adminPanel/books', [AdminPanelController::class, 'getBooks']);
+Route::get('adminPanel/authors', [AdminPanelController::class, 'getAuthors']);
 
 
 /*Login, Logout sessions */
