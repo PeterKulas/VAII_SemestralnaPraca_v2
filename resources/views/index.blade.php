@@ -4,6 +4,9 @@
 
 @section('content')
 <div class="container-fluid g-0 min-vh-100 ">
+
+    <x-flash />
+
     <div class="row g-0">
         <div class="col-sm-12 nadpis g-0">
             <h1>Vitajte na stránke BookRentu</h1>
