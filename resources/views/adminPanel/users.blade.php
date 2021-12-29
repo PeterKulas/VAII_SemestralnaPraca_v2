@@ -30,8 +30,8 @@
                 <td> {{ $user->email }} </td>
                 <td> {{ $user->registrationDate }}</td>
                 <td>
-                    <a class="operation edit"><i class="bi bi-pencil-fill"></i></a>
-                    <a class="operation delete"><i class="bi bi-trash"></i></a>
+                    <a class="operation edit" href="users/edit/{{ $user->id }} "><i class=" bi bi-pencil-fill"></i></a>
+                    <a class="operation delete" href="users/delete/{{ $user->id }}"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
             @endforeach

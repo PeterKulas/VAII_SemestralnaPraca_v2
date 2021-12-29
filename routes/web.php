@@ -34,10 +34,11 @@ Route::get('register', [RegisterController::class, 'getView'])->middleware('gues
 Route::post('register', [RegisterController::class, 'storeUser'])->middleware('guest');
 
 /*Admin panel */
-Route::get('/adminPanel/users', [AdminPanelController::class, 'getUsers']);
+Route::get('adminPanel/users', [AdminPanelController::class, 'getUsers']);
 Route::get('adminPanel/books', [AdminPanelController::class, 'getBooks']);
 Route::get('adminPanel/authors', [AdminPanelController::class, 'getAuthors']);
 
+Route::get('adminPanel/users/delete/{id}', [AdminPanelController::class, 'deleteUser']);
 
 /*Login, Logout sessions */
 Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('guest');
