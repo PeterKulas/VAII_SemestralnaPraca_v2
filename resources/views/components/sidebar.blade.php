@@ -12,6 +12,7 @@
                 <li class="list-item"><a href="/">Domov</a></li>
                 <li class="list-item"><a href="users">Používatelia</a></li>
                 <li class="list-item"><a href="books">Databáza kníh</a></li>
+                <li class="list-item"><a href="authors">Autori</a></li>
             </ul><br>
         </div>
     </div>

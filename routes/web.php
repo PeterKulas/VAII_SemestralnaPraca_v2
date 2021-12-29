@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Author;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -27,8 +29,8 @@ Route::get('/contact', function () {
 
 
 /*Registration */
-Route::get('register', [RegisterController::class, 'getView']);
-Route::post('register', [RegisterController::class, 'storeUser']);
+Route::get('register', [RegisterController::class, 'getView'])->middleware('guest'); //Len host sa moze registrovat
+Route::post('register', [RegisterController::class, 'storeUser'])->middleware('guest');
 
 /*Admin panel */
 Route::get('/adminPanel/users', function () {
@@ -40,3 +42,11 @@ Route::get('/adminPanel/users', function () {
 Route::get('/adminPanel/books', function () {
     return view('adminPanel/books');
 });
+
+Route::get('/adminPanel/authors', function () {
+    return view('adminPanel/authors', [
+        'authors' => Author::all()
+    ]);
+});
+
+//Route::get('adminPanel/authors', [AdminPanelController::class, 'getViewAuthors']);

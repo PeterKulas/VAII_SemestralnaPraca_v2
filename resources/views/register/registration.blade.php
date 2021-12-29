@@ -6,6 +6,9 @@
 
 
 <div class="row justify-content-center g-0">
+
+    <x-flash />
+
     <div class="col-md-3 g-0">
         <div class="modal-header">
             <h5 class="title">Registrácia</h5>
