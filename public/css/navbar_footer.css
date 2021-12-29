@@ -97,6 +97,7 @@ li.nav-item {
 .login span:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: #0c2d48;
 }
 
 .btn {

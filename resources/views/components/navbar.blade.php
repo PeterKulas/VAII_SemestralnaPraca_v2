@@ -17,15 +17,19 @@
                         <div class="logout">
                             <span class="welcomeMessage">Vitaj, {{ auth()->user()->firstname }} !</span>
                             <div class="logout">
-                                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Odhlásiť sa</button>
+                                <form method='POST' action="/logout">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">Odhlásiť sa</button>
+
+                                </form>
                             </div>
                         </div>
                         @else
                         <li>
                             <div class="login">
                                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Prihlásiť sa</button>
+                                    data-bs-target="#loginModal"><a href="login">Prihlásiť sa</a></button>
                                 <span><a href="register">Nemáš vytvorený učet? Registruj sa!</a></span>
                             </div>
                         </li>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
 use App\Models\Author;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -51,4 +52,7 @@ Route::get('/adminPanel/authors', function () {
 
 //Route::get('adminPanel/authors', [AdminPanelController::class, 'getViewAuthors']);
 
-Route:post('logout', [SessionsController::class, 'destroy']);
+
+/*Login, Logout sessions */
+Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('guest');
+Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
