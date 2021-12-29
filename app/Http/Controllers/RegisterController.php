@@ -28,9 +28,8 @@ class RegisterController extends Controller
     session()->flash('success', 'Úspešne si sa zaregistroval!');
 
     //Login user
-    auth()->login($user);
+    //auth()->login($user);
 
-   // return redirect('/');
    return view("register/registration");
 }
 

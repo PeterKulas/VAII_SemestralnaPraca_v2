@@ -28,8 +28,8 @@
                         @else
                         <li>
                             <div class="login">
-                                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal"><a href="login">Prihlásiť sa</a></button>
+                                <a href="login"><button type="button" class="btn btn-outline-light"
+                                        data-bs-toggle="modal" data-bs-target="#loginModal">Prihlásiť sa</button></a>
                                 <span><a href="register">Nemáš vytvorený učet? Registruj sa!</a></span>
                             </div>
                         </li>

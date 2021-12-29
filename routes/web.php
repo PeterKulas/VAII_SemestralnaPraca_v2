@@ -55,4 +55,6 @@ Route::get('/adminPanel/authors', function () {
 
 /*Login, Logout sessions */
 Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('guest');
+Route::post('login', [SessionsController::class, 'loginUser'])->middleware('guest');
+
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');

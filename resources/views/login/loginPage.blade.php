@@ -7,16 +7,30 @@
 <div class="container login-container ">
     <div class="row justify-content-center">
         <div class="col-md-4 login-form">
-            <h3>Login</h3>
-            <form>
+            <h3>Prihlásenie</h3>
+            <form method="POST" action="/login">
+                @csrf
+
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email:" value="" />
+                    <input type="text" name='email' class="form-control" placeholder="Email:" value="{{ old('email') }}"
+                        required />
                 </div>
+
+                @error('email')
+                <p class="error"> {{ $message }}</p>
+                @enderror
+
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Heslo:" value="" />
+                    <input type="password" name='password' class="form-control" placeholder="Heslo:" value=""
+                        required />
                 </div>
+
+                @error('password')
+                <p class="error"> {{ $message }}</p>
+                @enderror
+
                 <div class="form-group">
-                    <input type="submit" class="btnSubmit" value="Login" />
+                    <button type="submit" class="btnSubmit">Prihlásiť sa</button>
                 </div>
             </form>
         </div>
