@@ -50,3 +50,5 @@ Route::get('/adminPanel/authors', function () {
 });
 
 //Route::get('adminPanel/authors', [AdminPanelController::class, 'getViewAuthors']);
+
+Route:post('logout', [SessionsController::class, 'destroy']);

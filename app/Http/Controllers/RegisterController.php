@@ -24,8 +24,11 @@ class RegisterController extends Controller
 
     $formInput['password'] = bcrypt($formInput['password']);
 
-    User::create($formInput);
+    $user = User::create($formInput);
     session()->flash('success', 'Úspešne si sa zaregistroval!');
+
+    //Login user
+    auth()->login($user);
 
    // return redirect('/');
    return view("register/registration");

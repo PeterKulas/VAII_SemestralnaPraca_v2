@@ -12,9 +12,10 @@
                         <li class="nav-item"><a href="/">Domov</a></li>
                         <li class="nav-item"><a href="/about">O nás</a></li>
                         <li class="nav-item"><a href="/contact">Kontakt</a></li>
+
                         @auth
                         <div class="logout">
-                            <span class="welcomeMessage">Vitaj, {{ auth()->user()->firsname }} !</span>
+                            <span class="welcomeMessage">Vitaj, {{ auth()->user()->firstname }} !</span>
                             <div class="logout">
                                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                                     data-bs-target="#loginModal">Odhlásiť sa</button>
@@ -24,14 +25,12 @@
                         <li>
                             <div class="login">
                                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">Prihlásiť
-                                    sa</button>
-                                @guest
+                                    data-bs-target="#loginModal">Prihlásiť sa</button>
                                 <span><a href="register">Nemáš vytvorený učet? Registruj sa!</a></span>
-                                @endguest
                             </div>
                         </li>
                         @endauth
+
                     </ul>
                 </div>
             </div>

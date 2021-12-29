@@ -88,20 +88,23 @@ li.nav-item {
     flex-direction: column;
 }
 
-.login span,
-.logout span {
+.login span {
     font-size: xx-small;
     color: white;
 }
 
 .login span:active,
-.login span:hover,
-.logout span:active,
-.logout span:hover {
+.login span:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
 .btn {
     font-weight: bold;
+}
+
+.logout .welcomeMessage {
+    color: white;
+    text-decoration: none;
+    font-size: medium;
 }
