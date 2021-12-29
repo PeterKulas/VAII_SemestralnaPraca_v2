@@ -13,6 +13,8 @@
                         @auth
                         @if(auth()->user()->firstname === "Admin" )
                         <li class="nav-item"><a href="/adminPanel/users">AdminPanel</a></li>
+                        @else
+                        <li class="nav-item"><a href="#">Katalóg kníh</a></li>
                         @endif
                         @endauth
 
@@ -32,7 +34,6 @@
                                     @csrf
                                     <button type="submit" class="btn btn-outline-light" data-bs-toggle="modal"
                                         data-bs-target="#loginModal">Odhlásiť sa</button>
-
                                 </form>
                             </div>
                         </div>

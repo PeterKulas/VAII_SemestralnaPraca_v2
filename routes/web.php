@@ -30,7 +30,7 @@ Route::get('/contact', function () {
 
 
 /*Registration */
-Route::get('register', [RegisterController::class, 'getView'])->middleware('guest'); //Len host sa moze registrovat
+Route::get('register', [RegisterController::class, 'getView'])->middleware('guest'); 
 Route::post('register', [RegisterController::class, 'storeUser'])->middleware('guest');
 
 /*Admin panel */
