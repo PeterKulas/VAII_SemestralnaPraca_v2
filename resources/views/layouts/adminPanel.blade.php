@@ -17,6 +17,8 @@
 <body>
     <x-sidebar />
     @yield('content')
+
+    <script src="/js/adminPanel.js"></script>
 </body>
 
 </html>

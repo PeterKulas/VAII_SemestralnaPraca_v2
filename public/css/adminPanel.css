@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-    background-color: #145da0;
+    background-color: #0c2d48;
     position: fixed;
     top: 0;
     left: 0;
@@ -66,6 +66,23 @@ a {
 
 .card {
     border: 1px solid black;
+}
+
+/*Admin panel list item*/
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bi-plus-square {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.bi-plus-square:active,
+.bi-plus-square:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

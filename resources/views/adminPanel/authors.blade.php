@@ -2,11 +2,13 @@
 
 @section('title', 'Autori')
 
-
 @section('content')
 
 <div class="col-sm-11 maincontent">
-    <h2>Autori</h2>
+    <div class="header">
+        <h2>Autori</h2>
+        <i class="bi bi-plus-square"></i>
+    </div>
     <hr>
     <table class="table table-striped">
         <thead>
