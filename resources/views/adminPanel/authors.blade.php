@@ -26,7 +26,8 @@
                 <td> {{ $author->firstname }} </td>
                 <td> {{ $author->lastname }} </td>
                 <td>
-                    <a class="operation edit"><i class="bi bi-pencil-fill"></i></a>
+                    <a class="operation edit" href="authors/edit/{{ $author->id }} "><i
+                            class=" bi bi-pencil-fill"></i></a>
                     <a class="operation delete" href="authors/delete/{{ $author->id }}"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>

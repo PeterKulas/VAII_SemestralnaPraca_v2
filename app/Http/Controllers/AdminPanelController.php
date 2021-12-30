@@ -51,4 +51,17 @@ class AdminPanelController extends Controller
         $author->delete();
         return redirect("adminPanel/authors");
     }
+
+    public function getAuthor($id) {
+        $author = Author::find($id);
+        return view("adminPanel/author/editAuthor",["author" => $author]);
+    }
+
+    public function editAuthor(Request $request) {
+        $author = Author::find($request->ID);
+        $author->firstname = $request->Firstname;
+        $author->lastname = $request->Lastname;
+        $author->save();
+        return redirect("adminPanel/authors");
+    }
 }

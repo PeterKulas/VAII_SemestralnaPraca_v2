@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit-používateľ</title>
+    <title>Edit-autor</title>
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,21 +18,19 @@
 
 <body>
 
-    <h2>Upraviť používateľa {{ $user->firstname }}</h2>
+    <h2>Upraviť autora {{ $author->firstname }} {{ $author->lastname }}</h2>
     <hr>
     <div class="col-sm-11 maincontent">
-        <form action="/adminPanel/user/edit" method="POST">
+        <form action="/adminPanel/author/edit" method="POST">
 
             @csrf
             <label for="ID">ID:</label>
-            <input type="text" id="ID" name="ID" value="{{ $user->id}}" readonly><br>
+            <input type="text" id="ID" name="ID" value="{{ $author->id}}" readonly><br>
             <label for="Firstname">Meno:</label>
             <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname"
-                value="{{ $user->firstname}}"><br>
+                value="{{ $author->firstname}}"><br>
             <label for="Lastname">Priezvisko:</label>
-            <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" value="{{ $user->lastname}}"><br>
-            <label for=" Email">Email:</label>
-            <input id="inputEditEmail" type="email" id="Email" name="Email" value="{{ $user->email}}"><br>
+            <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" value="{{ $author->lastname}}"><br>
             <button class="btn btn-primary" type="submit"> Editovat</button>
         </form>
     </div>
