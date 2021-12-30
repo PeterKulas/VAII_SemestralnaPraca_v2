@@ -22,7 +22,7 @@ class AdminPanelController extends Controller
 
     public function getUser($id) {
         $user = User::find($id);
-        return view("adminPanel/users/editUser",["user" => $user]);
+        return view("adminPanel/user/editUser",["user" => $user]);
     }
 
     public function editUser(Request $request) {
@@ -44,5 +44,11 @@ class AdminPanelController extends Controller
     public function getAuthors() {
         $authors = Author::all();
         return view("adminPanel/authors",["authors" => $authors]);
+    }
+
+    public function deleteAuthor($id) {
+        $author = Author::find($id);
+        $author->delete();
+        return redirect("adminPanel/authors");
     }
 }

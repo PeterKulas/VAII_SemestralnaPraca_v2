@@ -40,7 +40,9 @@ Route::get('adminPanel/authors', [AdminPanelController::class, 'getAuthors']);
 
 Route::get('adminPanel/users/delete/{id}', [AdminPanelController::class, 'deleteUser']);
 Route::get('adminPanel/users/edit/{id}', [AdminPanelController::class, 'getUser']);
-Route::post('adminPanel/users/edit', [AdminPanelController::class, 'editUser']);
+Route::post('adminPanel/user/edit', [AdminPanelController::class, 'editUser']);
+
+Route::get('adminPanel/authors/delete/{id}', [AdminPanelController::class, 'deleteAuthor']);
 
 /*Login, Logout sessions */
 Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('guest');
