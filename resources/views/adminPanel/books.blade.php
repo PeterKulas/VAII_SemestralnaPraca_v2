@@ -2,7 +2,6 @@
 
 @section('title', 'Knihy')
 
-
 @section('content')
 
 <div class="col-sm-11 maincontent">

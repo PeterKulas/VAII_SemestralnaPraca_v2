@@ -8,6 +8,7 @@
 <div class="col-sm-11 maincontent">
     <h2>Používatelia</h2>
     <hr>
+
     <table class="table table-striped">
         <thead>
             <tr>
