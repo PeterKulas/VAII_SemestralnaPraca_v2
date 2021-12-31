@@ -64,6 +64,32 @@ class AdminPanelController extends Controller
         return redirect("adminPanel/books");
     }
 
+    public function getInsertBookView() {
+        return view("adminPanel/book/insertBook");
+    }
+
+    public function storeBook(Request $request) {     
+        /*
+        $request->validate([
+        'Firstname' => ['required', 'min:2', "max:255"],
+        'Lastname' => ['required', 'min:2', "max:255"]
+        ]);
+        */
+       $data = $request->input();
+        
+       $book = new Book;
+       $book->authorID = $data['authorID'];
+       $book->rating = $data['rating'];
+       $book->isbn = $data['ISBN'];
+       $book->publication_year = $data['publication_year'];
+       $book->title = $data['title'];
+       $book->description = $data['description'];
+       $book->img = $data['img'];
+       $book->save();
+       
+        return redirect("adminPanel/books");
+    }
+
     /*AUTHORS*/
     public function getAuthors() {
         $authors = Author::all();
