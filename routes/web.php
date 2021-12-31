@@ -50,6 +50,11 @@ Route::get('adminPanel/books/delete/{id}', [AdminPanelController::class, 'delete
 Route::get('adminPanel/books/edit/{id}', [AdminPanelController::class, 'getBook']);
 Route::post('adminPanel/book/edit', [AdminPanelController::class, 'editBook']);
 
+/*Inserts */
+
+Route::get('adminPanel/authors/insert', [AdminPanelController::class, 'getInsertAuthorView']);
+Route::post('adminPanel/authors/insert', [AdminPanelController::class, 'storeAuthor']);
+
 /*Login, Logout sessions */
 Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'loginUser'])->middleware('guest');

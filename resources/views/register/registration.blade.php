@@ -15,7 +15,6 @@
         </div>
         <div class="modal-body">
             <form action="/register" method="POST">
-                <!-- schova form  -->
                 @csrf
 
                 <div class="input-group mb-3">
@@ -101,55 +100,5 @@
     </div>
 </div>
 @endsection
-
-<!-- <?php // include("components/navbar.html"); ?>
-
-        <?php 
-        /*if (isset($_GET['error'])) {
-            $error = $_GET['error'];
-            if ($error !== "none") {
-           */ ?>
-        <div class="row justify-content-center g-0">
-            <div class="col-md-3 g-0">
-                <div class="alert alert-danger" role="alert">
-                    <?php  /*switch ($error) {
-            case "emptyInput":
-                echo "Vyplň všetky polia!";
-                break;
-            case "samePasswords":
-                echo "Hesla sa nezhodujú!";
-                break;
-            case "shortPassword":
-                echo "Heslo musí obsahovať minimálne 8 znakov!";
-                break;   
-            case "invalidPassword":
-                echo "Heslo musí obsahovať minimálne 1 číslicu, 1 malé a 1 veľke písmeno!";
-                break;
-            case "invalidEmail":
-                echo "Naplatný formát emailovej adresy!";
-                break;
-            case "emailExist":
-                echo "Už existuje účet s touto emailovou adresou!";
-            case "invalidName":
-                echo "Meno ani priezvisko nesmie obsahovat cisla ani znaky!";
-                break;   
-        }*/?>
-                </div>
-            </div>
-        </div>
-        <?php 
-    //} ?>
-        <?php 
-        //if($error === "none" ) {?>
-        <div class="row justify-content-center g-0">
-            <div class="col-md-3 g-0">
-                <div class="alert alert-success" role="alert">
-                    Úspešne si sa zaregistroval!
-                </div>
-            </div>
-        </div>
-        <?php //}
-       //  }?> -->
-
 
 <script src="js/registrationPage.js"></script>

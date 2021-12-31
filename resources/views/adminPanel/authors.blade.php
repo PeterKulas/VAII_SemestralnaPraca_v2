@@ -7,7 +7,7 @@
 <div class="col-sm-11 maincontent">
     <div class="header">
         <h2>Autori</h2>
-        <i class="bi bi-plus-square"></i>
+        <a href="authors/insert"><i class="bi bi-plus-square"></i></a>
     </div>
     <hr>
     <table class="table table-striped">

@@ -88,4 +88,27 @@ class AdminPanelController extends Controller
         $author->save();
         return redirect("adminPanel/authors");
     }
+
+    public function getInsertAuthorView() {
+        return view("adminPanel/author/insertAuthor");
+    }
+
+    public function storeAuthor(Request $request) {     
+        
+        $request->validate([
+        'Firstname' => ['required', 'min:2', "max:255"],
+        'Lastname' => ['required', 'min:2', "max:255"]
+        ]);
+        
+       $data = $request->input();
+    
+       $author = new Author;
+       $author->firstname = $data['Firstname'];
+       $author->lastname = $data['Lastname'];
+
+       
+       $author->save();
+       
+        return redirect("adminPanel/authors");
+    }
 }
