@@ -53,11 +53,14 @@ class AdminPanelController extends Controller
     }
 
     public function editBook(Request $request) {
-        $user = Book::find($request->ID);
-        $user->firstname = $request->Firstname;
-        $user->lastname = $request->Lastname;
-        $user->email = $request->Email;
-        $user->save();
+        $book = Book::find($request->id);
+        $book->title = $request->title;
+        $book->authorID = $request->autor;
+        $book->rating = $request->Rating;
+        $book->ISBN = $request->ISBN;
+        $book->publication_year = $request->rok_vydania;
+        $book->description = $request->popis;
+        $book->save();
         return redirect("adminPanel/books");
     }
 

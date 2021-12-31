@@ -9,7 +9,7 @@
         <div class="col-md-6 login-form">
             <h3>Upraviť knihu: {{ $book->title }}</h3>
             <hr>
-            <form method="POST" action="/login">
+            <form method="POST" action="/adminPanel/book/edit">
                 @csrf
 
                 <div class="form-group">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label for="popis">Popis:</label>
-                    <textarea rows="5" cols="60">
+                    <textarea name='popis' rows="5" cols="60">
                         {{ $book->description}}
                         </textarea>
                 </div>
