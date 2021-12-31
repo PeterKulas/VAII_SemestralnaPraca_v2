@@ -35,8 +35,8 @@
                 <td> {{ $book->description }} </td>
                 <td> <img src="{{ $book->img }}" alt="{{ $book->title }}"> </td>
                 <td>
-                    <a class="operation edit"><i class="bi bi-pencil-fill"></i></a>
-                    <a class="operation delete"><i class="bi bi-trash"></i></a>
+                    <a class="operation edit" href="books/edit/{{ $book->id }} "><i class=" bi bi-pencil-fill"></i></a>
+                    <a class="operation delete" href="books/delete/{{ $book->id }}"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
             @endforeach

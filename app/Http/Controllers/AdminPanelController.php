@@ -41,6 +41,26 @@ class AdminPanelController extends Controller
         return view("adminPanel/books",["books" => $books]);
     }
 
+    public function deleteBook($id) {
+        $book = Book::find($id);
+        $book->delete();
+        return redirect("adminPanel/books");
+    }
+
+    public function getBook($id) {
+        $book = Book::find($id);
+        return view("adminPanel/book/editBook",["book" => $book]);
+    }
+
+    public function editBook(Request $request) {
+        $user = Book::find($request->ID);
+        $user->firstname = $request->Firstname;
+        $user->lastname = $request->Lastname;
+        $user->email = $request->Email;
+        $user->save();
+        return redirect("adminPanel/books");
+    }
+
     /*AUTHORS*/
     public function getAuthors() {
         $authors = Author::all();
