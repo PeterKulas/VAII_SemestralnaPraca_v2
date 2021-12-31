@@ -15,17 +15,25 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Meno</th>
-                <th scope="col">Priezvisko</th>
-                <th scope="col">Operacia</th>
+                <th scope="col">Nazov</th>
+                <th scope="col">Rating</th>
+                <th scope="col">ISBN</th>
+                <th scope="col">Rok vydania</th>
+                <th scope="col">Popis</th>
+                <th scope="col">Adresa obrázka</th>
+                <th scope="col">Operácia</th>
             </tr>
         </thead>
         <tbody>
             @foreach($books as $book)
             <tr>
-                <td scope="row">{{ $author->id }} </td>
-                <td> {{ $author->firstname }} </td>
-                <td> {{ $author->lastname }} </td>
+                <td scope="row">{{ $book->id }} </td>
+                <td> {{ $book->title }} </td>
+                <td> {{ $book->rating }} </td>
+                <td> {{ $book->ISBN }} </td>
+                <td> {{ $book->publication_year }} </td>
+                <td> {{ $book->description }} </td>
+                <td> {{ $book->img }} </td>
                 <td>
                     <a class="operation edit"><i class="bi bi-pencil-fill"></i></a>
                     <a class="operation delete"><i class="bi bi-trash"></i></a>

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Registracia')
+@section('title', 'Prihlásenie')
 
 @section('content')
 

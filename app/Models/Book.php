@@ -5,13 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Author extends Model
+class Book extends Model
 {
     public $timestamps = false;
     use HasFactory;
 
     protected $fillable = [
-        'firstname',
-        'lastname'
+        'authorID',
+        'rating',
+        'isbn',
+        'rok_vydania',
+        'nazov', 
+        'popis',
+        'adresa_obrazka'
     ];
 }

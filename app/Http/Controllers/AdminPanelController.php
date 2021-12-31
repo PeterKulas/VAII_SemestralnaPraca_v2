@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Author;
 use App\Models\User;
+use App\Models\Book;
 
 class AdminPanelController extends Controller
 {
@@ -36,7 +37,7 @@ class AdminPanelController extends Controller
     
     /*BOOKS*/
     public function getBooks() {
-        $books = Author::all();
+        $books = Book::all();
         return view("adminPanel/books",["books" => $books]);
     }
 
