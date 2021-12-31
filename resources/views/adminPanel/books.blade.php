@@ -20,7 +20,7 @@
                 <th scope="col">ISBN</th>
                 <th scope="col">Rok vydania</th>
                 <th scope="col">Popis</th>
-                <th scope="col">Adresa obrázka</th>
+                <th scope="col">Obrázok</th>
                 <th scope="col">Operácia</th>
             </tr>
         </thead>
@@ -33,7 +33,7 @@
                 <td> {{ $book->ISBN }} </td>
                 <td> {{ $book->publication_year }} </td>
                 <td> {{ $book->description }} </td>
-                <td> {{ $book->img }} </td>
+                <td> <img src="{{ $book->img }}" alt="{{ $book->title }}"> </td>
                 <td>
                     <a class="operation edit"><i class="bi bi-pencil-fill"></i></a>
                     <a class="operation delete"><i class="bi bi-trash"></i></a>
