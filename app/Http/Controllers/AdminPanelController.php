@@ -82,7 +82,7 @@ class AdminPanelController extends Controller
     }
 
     public function editAuthor(Request $request) {
-        $author = Author::find($request->ID);
+        $author = Author::find($request->id);
         $author->firstname = $request->Firstname;
         $author->lastname = $request->Lastname;
         $author->save();

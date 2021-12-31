@@ -44,7 +44,7 @@
                         </textarea>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btnSubmit">Upraviť</button>
+                    <button type="submit" class="btnSubmit">Uložiť zmeny</button>
                 </div>
             </form>
         </div>

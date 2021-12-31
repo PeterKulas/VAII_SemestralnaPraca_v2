@@ -1,40 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.editPage')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit-autor</title>
+@section('title', 'Uprava')
 
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+@section('content')
 
-</head>
+<div class="container login-container ">
+    <div class="row justify-content-center">
+        <div class="col-md-6 login-form">
+            <h3>Upraviť autora {{ $author->firstname }} {{ $author->lastname }}</h3>
+            <hr>
+            <form method="POST" action="/adminPanel/author/edit">
+                @csrf
 
-<body>
-
-    <h2>Upraviť autora {{ $author->firstname }} {{ $author->lastname }}</h2>
-    <hr>
-    <div class="col-sm-11 maincontent">
-        <form action="/adminPanel/author/edit" method="POST">
-
-            @csrf
-            <label for="ID">ID:</label>
-            <input type="text" id="ID" name="ID" value="{{ $author->id}}" readonly><br>
-            <label for="Firstname">Meno:</label>
-            <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname"
-                value="{{ $author->firstname}}"><br>
-            <label for="Lastname">Priezvisko:</label>
-            <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" value="{{ $author->lastname}}"><br>
-            <button class="btn btn-primary" type="submit"> Editovat</button>
-        </form>
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" name='id' class="form-control" value="{{ $author->id}}" readonly required />
+                </div>
+                <div class="form-group">
+                    <label for="Firstname">Meno:</label>
+                    <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname" class="form-control"
+                        value="{{ $author->firstname}}">
+                </div>
+                <div class="form-group">
+                    <label for="Lastname">Priezvisko:</label>
+                    <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" class="form-control"
+                        value="{{ $author->lastname}}">
+                </div><br>
+                <div class="form-group">
+                    <button type="submit" class="btnSubmit">Uložiť zmeny</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-</body>
-
-</html>
+</div>
