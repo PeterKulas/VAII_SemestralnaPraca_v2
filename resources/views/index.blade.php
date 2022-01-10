@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Home')
+@section('title', 'Domov')
 
 @section('content')
 <div class="container-fluid g-0 min-vh-100 ">
@@ -29,37 +29,27 @@
             <div class="row boxes">
                 <div class="row">
                     <div class="box col-sm-5 g-0">
-                        <h2>Nadpis</h2>
-                        London is the capital city of England. It is the most populous city in the United Kingdom,
-                        with
-                        a
-                        metropolitan area of over 13 million inhabitants.
+                        <h3>Čo u nás nájdeš?</h3>
+                        • množstvo domácich aj zahraničných titulov, od celosvetovo uznávaných autorov.
                     </div>
                     <div class="box col-sm-5 g-0">
-                        <h2>Nadpis</h2>
-                        Standing on the River Thames, London has been a major settlement for two millennia, its
-                        history
-                        going
-                        back to its founding by the Romans, who named it Londinium.
+                        <h3>Vytvor si účet!</h3>
+                        • vytvorením účtu získaš prístup ku knihám, ktoré si môžeš požičiať.
+                        Tak isto máš možnosť pridávať si knihy do obľúbených.
                     </div>
                 </div>
                 <div class="row">
                     <div class="box col-sm-5 g-0">
-                        <h2>Nadpis</h2>
-                        Standing on the River Thames, London has been a major settlement for two millennia, its
-                        history
-                        going
-                        back to its founding by the Romans, wh1o named it Londinium.
+                        <h3>Chceš nám pomôcť ?</h3>
+                        • neboj sa nás zazdieľať na jednej zo sociálnych sieti.
+
+                        *TODO pridaj linky s iconami na IG, FB, ...
                     </div>
                     <div class="box col-sm-5 g-0">
-                        <h2>Nadpis</h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas laboriosam nam animi
-                        culpa
-                        placeat
-                        voluptates harum, magni quisquam, deserunt commodi, sint corrupti cum unde at quo.
-                        Laboriosam,
-                        animi
-                        consequatur!
+                        <h3>Máš otázky?</h3>
+                        • neváhaj nás kontaktovať na nižšie uvedenom linku.
+                        Naši spolupracovníci pracuvú denne a budú sa ti snažiť
+                        odpísať čo najskôr.
                     </div>
                 </div>
             </div>
