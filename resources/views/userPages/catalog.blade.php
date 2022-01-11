@@ -11,7 +11,7 @@
             <h5 class="card-title">{{ $book->title }}</h5>
             <hr>
             <div class="cfooter">
-                <p class="author">{{ $book->authorID }}</p>
+                <p class="author">{{ $book->firstname }} {{ $book->lastname }}</p>
                 <a href="#"><i class="bi bi-heart"></i></a>
             </div>
 
