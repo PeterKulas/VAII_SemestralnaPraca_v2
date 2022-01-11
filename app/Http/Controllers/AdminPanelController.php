@@ -69,6 +69,9 @@ class AdminPanelController extends Controller
     }
 
     public function storeBook(Request $request) {     
+
+        //TODO Validation
+        
         /*
         $request->validate([
         'Firstname' => ['required', 'min:2', "max:255"],
