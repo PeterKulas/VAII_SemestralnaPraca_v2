@@ -26,15 +26,20 @@
     padding: 1.5%;
     border: none;
     cursor: pointer;
+    background-color: #0c2d48;
+    color: white;
 }
+
+.btnSubmit:active,
+.btnSubmit:hover {
+    color: orange !important;
+}
+
 .login-form .btnSubmit {
     font-weight: 600;
     color: #fff;
-    background-color: #0062cc;
 }
 
 .login-form .ForgetPwd {
-    color: #0062cc;
     font-weight: 600;
-    text-decoration: none;
 }

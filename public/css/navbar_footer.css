@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: #b1d4e0 !important;
+    /* background-color: #b1d4e0 !important; */
+    background-color: #daebe8 !important;
     font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
     height: 100%;
 }
@@ -25,15 +26,6 @@ body {
     color: white;
     text-decoration: none;
 }
-
-/*.navbar a:active,
-.navbar a:focus,
-.navbar a:hover {
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-}
-*/
 
 .bi {
     color: white;

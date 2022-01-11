@@ -18,3 +18,13 @@
     color: red;
     font-size: small;
 }
+
+.icon {
+    background-color: #0c2d48;
+    color: white;
+}
+
+.btn:hover,
+.btn:active {
+    color: orange;
+}

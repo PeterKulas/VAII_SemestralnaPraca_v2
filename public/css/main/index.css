@@ -52,6 +52,10 @@
     margin-left: 10px;
 }
 
+.box h3 {
+    text-decoration: underline 2px rgba(0, 0, 0, 0.38);
+}
+
 .image {
     display: flex;
     align-items: center;
