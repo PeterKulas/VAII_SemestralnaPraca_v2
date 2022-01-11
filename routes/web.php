@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\MissingBookController;
 use App\Models\Author;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +39,7 @@ Route::post('register', [RegisterController::class, 'storeUser'])->middleware('g
 Route::get('adminPanel/users', [AdminPanelController::class, 'getUsers']);
 Route::get('adminPanel/books', [AdminPanelController::class, 'getBooks']);
 Route::get('adminPanel/authors', [AdminPanelController::class, 'getAuthors']);
+Route::get('adminPanel/missingBooks', [MissingBookController::class, 'getMissingBooks']);
 
 Route::get('adminPanel/users/delete/{id}', [AdminPanelController::class, 'deleteUser']);
 Route::get('adminPanel/users/edit/{id}', [AdminPanelController::class, 'getUser']);
@@ -49,6 +52,8 @@ Route::post('adminPanel/author/edit', [AdminPanelController::class, 'editAuthor'
 Route::get('adminPanel/books/delete/{id}', [AdminPanelController::class, 'deleteBook']);
 Route::get('adminPanel/books/edit/{id}', [AdminPanelController::class, 'getBook']);
 Route::post('adminPanel/book/edit', [AdminPanelController::class, 'editBook']);
+
+Route::get('adminPanel/missingBooks/delete/{id}', [MissingBookController::class, 'deleteMissingBook']);
 
 /*Inserts */
 
@@ -63,3 +68,12 @@ Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('gu
 Route::post('login', [SessionsController::class, 'loginUser'])->middleware('guest');
 
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+
+/*Catalog */
+Route::get('catalog', [CatalogController::class, 'getCatalogView']);
+
+/*Favourites */
+
+/*Missing page */
+Route::get('missingbook', [MissingBookController::class, 'getView']);
+Route::post('missingbook', [MissingBookController::class, 'storeBook']);
