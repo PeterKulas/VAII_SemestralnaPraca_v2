@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Author;
 use App\Models\User;
 use App\Models\Book;
@@ -37,7 +38,8 @@ class AdminPanelController extends Controller
     
     /*BOOKS*/
     public function getBooks() {
-        $books = Book::all();
+       // $books = Book::all();
+        $books = DB::table('books')->join('authors', "books.authorID", "=", "authors.id" )->get();
         return view("adminPanel/books",["books" => $books]);
     }
 

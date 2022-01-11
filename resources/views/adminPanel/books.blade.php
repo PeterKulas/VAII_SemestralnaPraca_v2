@@ -16,6 +16,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nazov</th>
+                <th scope="col">Autor</th>
                 <th scope="col">Rating</th>
                 <th scope="col">ISBN</th>
                 <th scope="col">Rok vydania</th>
@@ -29,10 +30,11 @@
             <tr>
                 <td scope="row">{{ $book->id }} </td>
                 <td> {{ $book->title }} </td>
+                <td> {{ $book->firstname }} {{ $book->lastname }} </td>
                 <td> {{ $book->rating }} </td>
                 <td> {{ $book->ISBN }} </td>
                 <td> {{ $book->publication_year }} </td>
-                <td> {{ $book->description }} </td>
+                <td> {{ substr( $book->description, 0, 300) }}... </td>
                 <td> <img src="{{ $book->img }}" alt="{{ $book->title }}"> </td>
                 <td>
                     <a class="operation edit" href="books/edit/{{ $book->id }} "><i class=" bi bi-pencil-fill"></i></a>
