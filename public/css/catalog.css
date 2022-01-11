@@ -1,0 +1,33 @@
+.img-catalog {
+    height: 300px;
+    width: auto;
+    border-bottom: 2px solid black;
+}
+
+h5 {
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.bi-heart {
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.bi-heart:hover,
+.bi-heart:active {
+    color: blue;
+}
+
+.card {
+    border: 2px solid black;
+    width: 210px;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
+.cfooter {
+    display: flex;
+    justify-content: space-between;
+}
