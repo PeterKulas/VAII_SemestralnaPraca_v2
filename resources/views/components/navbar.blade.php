@@ -14,14 +14,18 @@
                         @if(auth()->user()->firstname === "Admin" )
                         <li class="nav-item"><a href="/adminPanel/users">AdminPanel</a></li>
                         @else
-                        <li class="nav-item"><a href="#">Katalóg kníh</a></li>
+                        <li class="nav-item"><a href="/missingbook">Chýba vám kniha?</a></li>
+                        <li class="nav-item"><a href="/catalog">Katalóg kníh</a></li>
+                        <li class="nav-item"><a href="/favourites">Obľúbené</a></li>
+
+                        <li class="nav-item"><a href="/">Domov</a></li>
+                        <li class="nav-item"><a href="/about">O nás</a></li>
+                        <li class="nav-item"><a href="/contact">Kontakt</a></li>
                         @endif
                         @endauth
 
-
-                        <li class="nav-item"><a href="/">Domov</a></li>
-
                         @guest
+                        <li class="nav-item"><a href="/">Domov</a></li>
                         <li class="nav-item"><a href="/about">O nás</a></li>
                         <li class="nav-item"><a href="/contact">Kontakt</a></li>
                         @endguest

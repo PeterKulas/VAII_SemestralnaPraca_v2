@@ -13,6 +13,7 @@
                 <li class="list-item"><a href="users">Používatelia</a></li>
                 <li class="list-item"><a href="books">Databáza kníh</a></li>
                 <li class="list-item"><a href="authors">Autori</a></li>
+                <li class="list-item"><a href="missingBooks">Chýbajúce knihy</a></li>
             </ul><br>
         </div>
     </div>
