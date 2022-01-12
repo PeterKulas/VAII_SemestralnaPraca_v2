@@ -72,7 +72,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <button type="submit" class="btnSubmit">Vložiť autora</button>
+                    <button type="submit" class="btnSubmit">Vložiť knihu</button>
                 </div>
             </form>
         </div>

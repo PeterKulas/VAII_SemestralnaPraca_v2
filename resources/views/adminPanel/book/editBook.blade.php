@@ -7,6 +7,7 @@
 <div class="container login-container ">
     <div class="row justify-content-center">
         <div class="col-md-6 login-form">
+
             <h3>Upraviť knihu: {{ $book->title }}</h3>
             <hr>
             <form method="POST" action="/adminPanel/book/edit">

@@ -71,6 +71,8 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 /*Catalog */
 Route::get('catalog', [CatalogController::class, 'getCatalogView']);
+Route::get('catalog/singleBook/{id}', [CatalogController::class, 'getSingleBookView']);
+
 
 /*Favourites */
 

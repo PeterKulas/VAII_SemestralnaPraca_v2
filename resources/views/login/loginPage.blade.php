@@ -12,8 +12,8 @@
                 @csrf
 
                 <div class="form-group">
-                    <input type="text" name='email' class="form-control" placeholder="Email:" value="{{ old('email') }}"
-                        required />
+                    <input type="text" name='email' id="inputEmailLogin" class="form-control" placeholder="Email:"
+                        value="{{ old('email') }}" required />
                 </div>
 
                 @error('email')
@@ -21,7 +21,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="password" name='password' class="form-control" placeholder="Heslo:" value=""
+                    <input type="password" name='password' class="form-control password" placeholder="Heslo:" value=""
                         required />
                 </div>
 

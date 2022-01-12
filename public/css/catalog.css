@@ -27,7 +27,30 @@ h5 {
     margin-left: auto;
 }
 
+.card-body a {
+    color: black;
+    text-decoration: none;
+}
+
 .cfooter {
     display: flex;
     justify-content: space-between;
+}
+
+/*SINGLE BOOK*/
+.singleBook-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.singleBook-list li {
+    list-style-type: none;
+}
+
+.singleBook-img {
+    width: 200px;
+}
+
+.title {
+    font-weight: bold;
 }

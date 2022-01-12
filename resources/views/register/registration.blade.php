@@ -10,7 +10,7 @@
 <div class="row justify-content-center g-0">
     <div class="col-md-3 g-0">
         <div class="modal-header">
-            <h5 class="title">Registrácia</h5>
+            <h2 class="title">Registrácia</h2>
         </div>
         <div class="modal-body">
             <form action="/register" method="POST">
@@ -26,6 +26,7 @@
                     <input id="inputFirstname" type="text" class="form-control" name="firstname" placeholder="Meno"
                         required name="firstname" value="{{ old('firstname') }}">
                 </div>
+                <p id="firstnameValidation"></p>
 
                 @error('firstname')
                 <p class="error"> {{ $message }}</p>
@@ -41,6 +42,7 @@
                     <input id="inputLastname" type="text" class="form-control" name="lastname" placeholder="Priezvisko"
                         required name="lastname" value="{{ old('lastname') }}">
                 </div>
+                <p id="lastnameValidation"></p>
 
                 @error('lastname')
                 <p class="error"> {{ $message }}</p>
@@ -70,6 +72,7 @@
                     <input id="inputRepass" type="password" class="form-control" name="repassword"
                         placeholder="Zopakuj heslo" required name="repassword">
                 </div>
+                <p id="passMsg" class="hidden">Hesla sa nezhoduju!</p>
 
                 @error('repassword')
                 <p class="error"> {{ $message }}</p>
@@ -84,13 +87,12 @@
                     <input id="inputEmail" type="email" class="form-control" name="email" placeholder="Email" required
                         name="email" value="{{ old('email') }}">
                 </div>
+                <p id="emailMsg"></p>
 
                 @error('email')
                 <p class="error"> {{ $message }}</p>
                 @enderror
 
-
-                <p id="emailMsg"></p>
                 <div class="d-grid col-12 mx-auto ">
                     <button class="btn icon" type="submit" name="submit"> Registrovať</button>
                 </div>
@@ -99,5 +101,3 @@
     </div>
 </div>
 @endsection
-
-<script src="js/registrationPage.js"></script>
