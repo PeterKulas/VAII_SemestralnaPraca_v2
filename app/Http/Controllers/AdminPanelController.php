@@ -38,7 +38,7 @@ class AdminPanelController extends Controller
     
     /*BOOKS*/
     public function getBooks() {
-        $books = DB::table('books')->join('authors', "books.authorID", "=", "authors.id" )->get();
+       $books = DB::table('books')->join('authors', "authors.id_author", "=", "books.authorID" )->get();
         return view("adminPanel/books",["books" => $books]);
     }
 
