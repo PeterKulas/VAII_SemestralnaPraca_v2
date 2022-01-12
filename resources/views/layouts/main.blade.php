@@ -27,6 +27,8 @@
     <x-navbar />
     @yield('content')
     <x-footer />
+
+    <script src="js/registrationFormValidation.js"></script>
 </body>
 
 </html>
