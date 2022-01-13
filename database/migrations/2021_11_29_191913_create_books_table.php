@@ -16,7 +16,8 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('authorID');
-            $table->string('rating');
+            $table->bigInteger('publisherID');
+            $table->double('rating');
             $table->string('ISBN')->unique();
             $table->string('publication_year');
             $table->string('title');
@@ -24,6 +25,7 @@ class CreateBooksTable extends Migration
             $table->string('img');
 
             $table->foreignId('authorID')->constrained('authors');
+            $table->foreignId('publisherID')->constrained('publishers');
         });
     }
 
