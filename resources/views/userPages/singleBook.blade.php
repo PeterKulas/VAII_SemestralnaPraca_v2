@@ -42,6 +42,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Napíš recenziu.." required></textarea>
                 </div>
+                <button type="submit" class="btn btn-light">Odoslať</button>
             </form>
         </div>
 
