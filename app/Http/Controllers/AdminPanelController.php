@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Author;
 use App\Models\User;
 use App\Models\Book;
+use App\Models\Publisher;
 
 class AdminPanelController extends Controller
 {
@@ -95,6 +96,7 @@ class AdminPanelController extends Controller
     }
 
     /*AUTHORS*/
+
     public function getAuthors() {
         $authors = Author::all();
         return view("adminPanel/authors",["authors" => $authors]);
@@ -108,8 +110,8 @@ class AdminPanelController extends Controller
 
     public function getAuthor($id) {
         $author = Author::find($id);
-        return view("adminPanel/author/editAuthor",["author" => $author]);
-    }
+    return view("adminPanel/author/editAuthor",["author" => $author]);
+}
 
     public function editAuthor(Request $request) {
         $author = Author::find($request->id);
@@ -123,22 +125,66 @@ class AdminPanelController extends Controller
         return view("adminPanel/author/insertAuthor");
     }
 
-    public function storeAuthor(Request $request) {     
-        
+    public function storeAuthor(Request $request) {
+
         $request->validate([
         'Firstname' => ['required', 'min:2', "max:255"],
         'Lastname' => ['required', 'min:2', "max:255"]
         ]);
-        
-       $data = $request->input();
-    
-       $author = new Author;
-       $author->firstname = $data['Firstname'];
-       $author->lastname = $data['Lastname'];
 
-       
-       $author->save();
-       
+        $data = $request->input();
+
+        $author = new Author;
+        $author->firstname = $data['Firstname'];
+        $author->lastname = $data['Lastname'];
+
+        $author->save();
         return redirect("adminPanel/authors");
     }
+
+    /*Publishers */
+
+    public function getPublishers() {
+
+    $publishers = Publisher::all();
+        return view("adminPanel/publishers",["publishers" => $publishers]);
+    }
+
+    public function deletePublisher($id) {
+        $publisher = Publisher::find($id);
+        $publisher->delete();
+        return redirect("adminPanel/publishers");
+    }
+
+    public function getPublisher($id) {
+        $publisher = Publisher::find($id);
+        return view("adminPanel/publisher/editPublisher",["publisher" => $publisher]);
+    }
+
+    public function editPublisher(Request $request) {
+        $publisher = Publisher::find($request->id);
+        $publisher->publisher = $request->publisherName;
+        $publisher->save();
+        return redirect("adminPanel/publishers");
+    }
+
+    public function getInsertPublisherView() {
+        return view("adminPanel/publisher/insertPublisher");
+    }
+
+    public function storePublisher(Request $request) {
+
+        $request->validate([
+        'publisherName' => ['required', 'min:2', "max:255"],
+        ]);
+
+        $data = $request->input();
+
+        $publisher = new Publisher;
+        $publisher->publisher= $data['publisherName'];
+
+        $publisher->save();
+        return redirect("adminPanel/authors");
+    }
+
 }

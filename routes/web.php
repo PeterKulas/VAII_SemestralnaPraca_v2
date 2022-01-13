@@ -39,7 +39,9 @@ Route::post('register', [RegisterController::class, 'storeUser'])->middleware('g
 Route::get('adminPanel/users', [AdminPanelController::class, 'getUsers']);
 Route::get('adminPanel/books', [AdminPanelController::class, 'getBooks']);
 Route::get('adminPanel/authors', [AdminPanelController::class, 'getAuthors']);
+Route::get('adminPanel/publishers', [AdminPanelController::class, 'getPublishers']);
 Route::get('adminPanel/missingBooks', [MissingBookController::class, 'getMissingBooks']);
+
 
 Route::get('adminPanel/users/delete/{id}', [AdminPanelController::class, 'deleteUser']);
 Route::get('adminPanel/users/edit/{id}', [AdminPanelController::class, 'getUser']);
@@ -53,6 +55,10 @@ Route::get('adminPanel/books/delete/{id}', [AdminPanelController::class, 'delete
 Route::get('adminPanel/books/edit/{id}', [AdminPanelController::class, 'getBook']);
 Route::post('adminPanel/book/edit', [AdminPanelController::class, 'editBook']);
 
+Route::get('adminPanel/publishers/delete/{id}', [AdminPanelController::class, 'deletePublisher']);
+Route::get('adminPanel/publishers/edit/{id}', [AdminPanelController::class, 'getPublisher']);
+Route::post('adminPanel/publisher/edit', [AdminPanelController::class, 'editPublisher']);
+
 Route::get('adminPanel/missingBooks/delete/{id}', [MissingBookController::class, 'deleteMissingBook']);
 
 /*Inserts */
@@ -63,6 +69,9 @@ Route::post('adminPanel/authors/insert', [AdminPanelController::class, 'storeAut
 Route::get('adminPanel/books/insert', [AdminPanelController::class, 'getInsertBookView']);
 Route::post('adminPanel/books/insert', [AdminPanelController::class, 'storeBook']);
 
+Route::get('adminPanel/publishers/insert', [AdminPanelController::class, 'getInsertPublisherView']);
+Route::post('adminPanel/publishers/insert', [AdminPanelController::class, 'storePublisher']);
+
 /*Login, Logout sessions */
 Route::get('login', [SessionsController::class, 'getLoginView'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'loginUser'])->middleware('guest');
@@ -72,7 +81,7 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 /*Catalog */
 Route::get('catalog', [CatalogController::class, 'getCatalogView']);
 Route::get('catalog/singleBook/{id}', [CatalogController::class, 'getSingleBookView']);
-
+Route::post('catalog/singleBook/{id}', [CatalogController::class, 'ajaxInsertRecension']);
 
 /*Favourites */
 
