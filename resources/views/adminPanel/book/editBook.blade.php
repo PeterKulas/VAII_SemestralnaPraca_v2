@@ -26,6 +26,10 @@
                     <input type="text" name='autor' class="form-control" value="{{ $book->authorID}}" required />
                 </div>
                 <div class="form-group">
+                    <label for="Rating">Vydavateľstvo:</label>
+                    <input type="text" name='Rating' class="form-control" value="{{ $book->publisherID}}" required />
+                </div>
+                <div class="form-group">
                     <label for="Rating">Rating:</label>
                     <input type="text" name='Rating' class="form-control" value="{{ $book->rating}}" required />
                 </div>
