@@ -19,13 +19,12 @@ class CatalogController extends Controller
 
       if($request->ajax()) {
          $books = Book::where('publisherID','=',$request->selectedOption)->join('authors', "authors.id_author", "=", "books.authorID" )->get();
-         $publishers = Publisher::all();
          
          if($request->selectedOption == null) {
             $books = DB::table('books')->join('authors', "authors.id_author", "=", "books.authorID" )->get();
          }
          
-         $view = view('userPages/catalogBooks',["books" => $books, "publishers" => $publishers])->render();
+         $view = view('userPages/catalogBooks',["books" => $books])->render();
          return response()->json(['html'=>$view, 'option' => $request->selectedOption]);
       }  
    }

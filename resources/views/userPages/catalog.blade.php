@@ -17,5 +17,8 @@
     </div>
 </div>
 <div class="card-deck row g-0" id="ajax-container">
+    @foreach($books as $book)
+    <x-books.renderBooks :book="$book" />
+    @endforeach
 </div>
 @endsection

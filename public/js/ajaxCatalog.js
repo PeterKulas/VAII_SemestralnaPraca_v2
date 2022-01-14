@@ -3,7 +3,6 @@ $(document).ready(function () {
         //e.preventDefault();
 
         let selectedOption = $("#select-vydavatelstva").val();
-        let ajaxContainer = document.getElementById("ajax-container");
 
         $.ajax({
             type: "POST",
@@ -14,9 +13,7 @@ $(document).ready(function () {
                 _token: $('meta[name="csrf-token"]').attr("content"),
             },
             success: function (response) {
-                console.log(response.html);
                 console.log(response);
-                console.log("Hura");
                 $("#ajax-container").html(response.html);
             },
         });
