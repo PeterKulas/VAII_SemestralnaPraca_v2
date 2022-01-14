@@ -63,3 +63,27 @@ h5 {
 .title {
     font-weight: bold;
 }
+
+#review-container {
+    background-color: white;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.reviewClass {
+    background-color: rgb(210, 232, 238);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.review-header {
+    margin-top: 15px;
+}
+
+.reviewClass label {
+    align-self: flex-end;
+    font-size: small;
+    width: 20%;
+}

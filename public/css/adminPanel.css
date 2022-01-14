@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-    background-color: #0c2d48;
+    background-color: var(--dark-blue);
     position: fixed;
     top: 0;
     left: 0;
@@ -13,14 +13,14 @@
 }
 
 .sidebar h4 {
-    color: white;
+    color: var(--main-text-color-white);
     font-weight: bold;
     margin-top: 40px;
     text-align: center;
 }
 
 a {
-    color: rgba(253, 250, 250, 0.959);
+    color: var(--main-text-color-white);
 }
 
 .operation {
@@ -29,15 +29,15 @@ a {
 
 .operation:hover,
 .operation:active {
-    cursor: pointer;
+    cursor: var(--cursor-ptr);
     font-weight: bold;
 }
 .edit {
-    color: green;
+    color: var(--success-color);
 }
 
 .delete {
-    color: red;
+    color: var(--error-color);
 }
 
 .theme-box {
@@ -51,13 +51,13 @@ a {
     border-radius: 8px;
     margin-top: 10px;
     margin-left: 10px;
-    background-color: white;
+    background-color: var(--main-text-color-white);
     font-weight: bold;
     border: none;
 }
 
 .active {
-    background-color: yellow;
+    background-color: var(--active-color);
 }
 
 .card-deck {
@@ -65,7 +65,7 @@ a {
 }
 
 .card {
-    border: 1px solid black;
+    border: 1px solid var(--black-color);
 }
 
 /*Admin panel list item*/
@@ -77,12 +77,12 @@ a {
 .bi-plus-square {
     font-size: 30px;
     font-weight: bold;
-    color: green;
+    color: var(--success-color);
 }
 
 .bi-plus-square:active,
 .bi-plus-square:hover {
-    cursor: pointer;
+    cursor: var(--cursor-ptr);
 }
 
 @media screen and (max-width: 767px) {

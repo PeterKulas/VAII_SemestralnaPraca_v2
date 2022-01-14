@@ -5,8 +5,7 @@
 }
 
 body {
-    /* background-color: #b1d4e0 !important; */
-    background-color: rgb(210, 232, 238) !important;
+    background-color: var(--main-bg-color) !important;
     font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
     height: 100%;
 }
@@ -22,18 +21,15 @@ body {
     margin-bottom: 30px;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
-
+.navbar a,
 .bi {
-    color: white;
+    color: var(--main-text-color-white);
+    text-decoration: none;
 }
 
 .collapse {
     justify-content: flex-end;
-    background-color: #0c2d48;
+    background-color: var(--dark-blue);
     padding: 1rem;
 }
 
@@ -44,13 +40,13 @@ body {
 
 .nav-item,
 .navbar-brand {
-    color: white;
+    color: var(--main-text-color-white);
     font-size: large;
 }
 
 .nav-item:hover,
 .nav-item:active {
-    cursor: pointer;
+    cursor: var(--cursor-ptr);
     text-decoration: underline;
 }
 
@@ -65,11 +61,11 @@ li.nav-item {
 
 .navbar,
 .footer {
-    background-color: #0c2d48;
+    background-color: var(--dark-blue);
 }
 
 .footer {
-    color: white;
+    color: var(--main-text-color-white);
     padding: 10px;
     font-size: 1.1rem;
 }
@@ -82,14 +78,14 @@ li.nav-item {
 
 .login span {
     font-size: xx-small;
-    color: white;
+    color: var(--main-text-color-white);
 }
 
 .login span:active,
 .login span:hover {
     text-decoration: underline;
-    cursor: pointer;
-    color: #0c2d48;
+    cursor: var(--cursor-ptr);
+    color: var(--dark-blue);
 }
 
 .btn {
@@ -97,7 +93,7 @@ li.nav-item {
 }
 
 .logout .welcomeMessage {
-    color: white;
+    color: var(--main-text-color-white);
     text-decoration: none;
     font-size: medium;
 }

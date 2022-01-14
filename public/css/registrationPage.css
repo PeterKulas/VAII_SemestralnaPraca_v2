@@ -6,7 +6,7 @@
 #emailMsg,
 #firstnameValidation,
 #lastnameValidation {
-    color: #696969;
+    color: var(--validation-message);
     font-size: 15px;
 }
 
@@ -15,16 +15,16 @@
 }
 
 .error {
-    color: red;
+    color: var(--error-color);
     font-size: small;
 }
 
 .icon {
-    background-color: #0c2d48;
-    color: white;
+    background-color: var(--dark-blue);
+    color: var(--main-text-color-white);
 }
 
 .btn:hover,
 .btn:active {
-    color: orange;
+    color: var(--hover-active-button);
 }

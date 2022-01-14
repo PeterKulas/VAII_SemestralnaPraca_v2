@@ -1,0 +1,14 @@
+:root {
+    --main-bg-color: rgb(210, 232, 238);
+    --main-text-color-white: white;
+    --dark-blue: #0c2d48;
+    --main-light-blue: #145da0;
+    --error-color: red;
+    --success-color: green;
+    --active-color: yellow;
+    --black-color: black;
+    --validation-message: #696969;
+    --hover-active-button: orange;
+    --shadow-color: rgba(0, 0, 0, 0.38);
+    --cursor-ptr: pointer;
+}

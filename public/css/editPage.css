@@ -10,7 +10,7 @@
 .login-form h3 {
     text-align: center;
     font-weight: bold;
-    color: #333;
+    color: var(--validation-message);
 }
 
 .login-container form {
@@ -23,20 +23,17 @@
     border-radius: 1rem;
     padding: 1.5%;
     border: none;
-    cursor: pointer;
+    cursor: var(--cursor-ptr);
 }
 .login-form .btnSubmit {
     font-weight: 600;
-    color: #fff;
-    background-color: #0062cc;
+    color: var(--main-text-color-white);
+    background-color: var(--dark-blue);
 }
-
-/* .login-form .ForgetPwd {
-    color: #0062cc;
-    font-weight: 600;
-    text-decoration: none;
-} */
-
+.btnSubmit:hover,
+.btnSubmit:active {
+    color: var(--hover-active-button);
+}
 .error {
-    color: red;
+    color: var(--error-color);
 }
