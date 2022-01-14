@@ -31,11 +31,11 @@
             <div class="contact-form">
                 <span>Napíš nám mail</span>
                 <form name="form">
-                    <input type="text" id="fname" name="fname" placeholder="Meno"><br>
-                    <input type="text" id="fmail" name="fmail" placeholder="E-mail"><br>
-                    <textarea rows="6" cols="30" name="fTextArea" placeholder='Správa...'></textarea>
+                    <input type="text" id="fname" name="fname" placeholder="Meno" required><br>
+                    <input type="text" id="fmail" name="fmail" placeholder="E-mail" required><br>
+                    <textarea rows="6" cols="20" name="fTextArea" placeholder='Správa...' required></textarea>
+                    <button type="submit" class="contact-btn">Odoslať</button>
                 </form>
-                <button type="submit" class="contact-btn">Odoslať</button>
             </div>
         </div>
     </div>
