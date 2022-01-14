@@ -83,7 +83,7 @@ Route::get('catalog', [CatalogController::class, 'getCatalogView'])->middleware(
 Route::post('catalog', [CatalogController::class, 'getCatalogSelected'])->middleware('auth');
 
 Route::get('catalog/singleBook/{id}', [CatalogController::class, 'getSingleBookView'])->middleware('auth');
-Route::post('catalog/singleBook/{id}', [CatalogController::class, 'ajaxInsertRecension'])->middleware('auth');
+Route::post('catalog/singleBook/{id}', [CatalogController::class, 'storeReview'])->middleware('auth');
 
 /*Missing page */
 Route::get('missingbook', [MissingBookController::class, 'getView'])->middleware('auth');
