@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="/css/editPage.css">
+    <link rel="stylesheet" href="/css/root.css">
 </head>
 
 <body>
