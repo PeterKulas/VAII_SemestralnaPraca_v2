@@ -20,11 +20,19 @@ h5 {
     color: blue;
 }
 
+#select-vydavatelstva {
+    margin-bottom: 15px;
+}
+
 .card {
     border: 2px solid black;
     width: 210px;
     margin-bottom: 15px;
-    margin-left: auto;
+    margin-left: 15px;
+}
+
+.card-deck {
+    justify-content: center;
 }
 
 .card-body a {
@@ -43,7 +51,8 @@ h5 {
     margin-bottom: 20px;
 }
 
-.singleBook-list li {
+.singleBook-list li,
+.filter-ul li {
     list-style-type: none;
 }
 

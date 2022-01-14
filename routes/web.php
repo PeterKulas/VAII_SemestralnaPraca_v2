@@ -80,10 +80,10 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 /*Catalog */
 Route::get('catalog', [CatalogController::class, 'getCatalogView']);
+Route::post('catalog', [CatalogController::class, 'getCatalogSelected']);
+
 Route::get('catalog/singleBook/{id}', [CatalogController::class, 'getSingleBookView']);
 Route::post('catalog/singleBook/{id}', [CatalogController::class, 'ajaxInsertRecension']);
-
-/*Favourites */
 
 /*Missing page */
 Route::get('missingbook', [MissingBookController::class, 'getView']);

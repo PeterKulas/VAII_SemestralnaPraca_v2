@@ -3,21 +3,19 @@
 @section('title', 'Katalog')
 
 @section('content')
-<div class="card-deck row g-0">
-    @foreach($books as $book)
-    <div class="card">
-        <img class="card-img-top img-catalog" src="{{ $book->img }}" alt="{{ $book->title }}">
-        <div class="card-body">
-            <a href="catalog/singleBook/{{ $book->id }}">
-                <h5 class="card-title">{{ $book->title }}</h5>
-            </a>
-            <hr>
-            <div class="cfooter">
-                <p class="author">{{ $book->firstname }} {{ $book->lastname }}</p>
-                <a href="#"><i class="bi bi-heart"></i></a>
-            </div>
+<div class="row g-0  justify-content-center">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label for="">Vydavateľstvo:</label>
+            <select name="" id="select-vydavatelstva" class="form-control">
+                <option value="">Vyberte vydavateľsvo</option>
+                @foreach($publishers as $publisher)
+                <option value="{{ $publisher->publisherID}}"> {{ $publisher->publisher}} </option>
+                @endforeach
+            </select>
         </div>
     </div>
-    @endforeach
+</div>
+<div class="card-deck row g-0" id="ajax-container">
 </div>
 @endsection

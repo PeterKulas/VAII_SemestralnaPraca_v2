@@ -37,7 +37,7 @@
         </div>
 
         <div class="row">
-            <form action="">
+            <form method="Post" action="">
                 <div class="form-group">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Napíš recenziu.." required></textarea>

@@ -22,13 +22,14 @@
         <tbody>
             @foreach($authors as $author)
             <tr>
-                <td scope="row">{{ $author->id }} </td>
+                <td scope="row">{{ $author->id_author }} </td>
                 <td> {{ $author->firstname }} </td>
                 <td> {{ $author->lastname }} </td>
                 <td>
-                    <a class="operation edit" href="authors/edit/{{ $author->id }} "><i
+                    <a class="operation edit" href="authors/edit/{{ $author->id_author }} "><i
                             class=" bi bi-pencil-fill"></i></a>
-                    <a class="operation delete" href="authors/delete/{{ $author->id }}"><i class="bi bi-trash"></i></a>
+                    <a class="operation delete" href="authors/delete/{{ $author->id_author }}"><i
+                            class="bi bi-trash"></i></a>
                 </td>
             </tr>
             @endforeach

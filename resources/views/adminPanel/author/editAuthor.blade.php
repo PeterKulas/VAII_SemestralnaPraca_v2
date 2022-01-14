@@ -7,6 +7,7 @@
 <div class="container login-container ">
     <div class="row justify-content-center">
         <div class="col-md-6 login-form">
+
             <h3>Upraviť autora {{ $author->firstname }} {{ $author->lastname }}</h3>
             <hr>
             <form method="POST" action="/adminPanel/author/edit">
@@ -14,7 +15,8 @@
 
                 <div class="form-group">
                     <label for="id">ID:</label>
-                    <input type="text" name='id' class="form-control" value="{{ $author->id}}" readonly required />
+                    <input type="text" name='id' class="form-control" value="{{ $author->id_author}}" readonly
+                        required />
                 </div>
                 <div class="form-group">
                     <label for="Firstname">Meno:</label>

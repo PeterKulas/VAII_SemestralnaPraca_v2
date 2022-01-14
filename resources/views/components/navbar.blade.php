@@ -16,7 +16,6 @@
                         @else
                         <li class="nav-item"><a href="/missingbook">Chýba vám kniha?</a></li>
                         <li class="nav-item"><a href="/catalog">Katalóg kníh</a></li>
-                        <li class="nav-item"><a href="/favourites">Obľúbené</a></li>
 
                         <li class="nav-item"><a href="/">Domov</a></li>
                         <li class="nav-item"><a href="/about">O nás</a></li>
