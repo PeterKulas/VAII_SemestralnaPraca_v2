@@ -27,9 +27,9 @@
                 knihu nemáme, urobíme všetko preto aby sme ju pre vás zohnali.</p>
         </div>
         <div class="col-sm-3 main gy-4 p-4">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a, reiciendis earum repudiandae iusto
-                asperiores recusandae possimus fugiat excepturi corrupti praesentium facilis illum molestiae
-                architecto dolorem ab impedit quam suscipit?</p>
+            <p> Ako jediná spoločnosť na slovensku prevádzkujeme niečo takéto a úplne bezplatne.
+                Máme kontakty na medzinárodne knižnice a kníhkupectvá. V prípade, že nás chcete podporiť, ozvite sa nám
+                a dohodneme sa na ďaľšom postupe.</p>
         </div>
     </div>
 </div>
