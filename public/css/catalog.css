@@ -1,7 +1,7 @@
 .img-catalog {
     height: 300px;
     width: auto;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black-color);
 }
 
 h5 {
@@ -10,14 +10,14 @@ h5 {
 }
 
 .bi-heart {
-    color: red;
+    color: var(--error-color);
     font-weight: bold;
     font-size: 25px;
 }
 
 .bi-heart:hover,
 .bi-heart:active {
-    color: blue;
+    color: var(--main-light-blue);
 }
 
 #select-vydavatelstva {
@@ -25,7 +25,7 @@ h5 {
 }
 
 .card {
-    border: 2px solid black;
+    border: 2px solid var(--black-color);
     width: 210px;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -36,7 +36,7 @@ h5 {
 }
 
 .card-body a {
-    color: black;
+    color: var(--black-color);
     text-decoration: none;
 }
 
@@ -65,13 +65,13 @@ h5 {
 }
 
 #review-container {
-    background-color: white;
+    background-color: var(--main-text-color-white);
     padding-bottom: 50px;
     border-radius: 10px;
 }
 
-.reviewClass {
-    background-color: rgb(210, 232, 238);
+.review {
+    background-color: var(--main-bg-color);
     padding: 10px;
     margin-top: 10px;
     border-radius: 10px;
@@ -82,7 +82,7 @@ h5 {
     margin-top: 15px;
 }
 
-.reviewClass label {
+.review label {
     align-self: flex-end;
     font-size: small;
     width: 20%;
