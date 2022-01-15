@@ -37,18 +37,33 @@
         </div>
 
         <div class="row">
-            <form method="Post" action="">
-                <div class="form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            <form id="review-form" method="Post">
+                @csrf
+                <div class=" form-group">
+                    <input type="hidden" value="{{ $book->id }}" id="bookID" name="bookID" readonly />
+                    <input type="hidden" value="{{ auth()->user()->id }}" id="userID" name="userID" readonly>
+                    <input type="hidden" value="{{ auth()->user()->firstname }}" id="reviewFirstname" name="reviewFirstname" readonly>
+                    <input type="hidden" value="{{ auth()->user()->lastname }}" id="reviewLastname" name="reviewLastname" readonly>
+                    <textarea class="form-control" name="reviewArea" id="reviewArea" rows="3"
                         placeholder="Napíš recenziu.." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-light">Odoslať</button>
+                <button id="submit-button" type="button" class="btn btn-light">Odoslať</button>
             </form>
         </div>
 
         <div class="row">
-            <h2>Recenzie:</h2>
+            <h2 class="review-header">Recenzie:</h2>
+            <div id="review-container">
+                @foreach($reviews as $review)
+                <div class="review">
+                    <p> {{ $review->reviewText }} </p>
+                    <label> {{ $review->firstname }} {{ $review->lastname }}</label>
+                </div>
+                @endforeach
+            </div>
         </div>
+
     </div>
+</div>
 </div>
 @endsection

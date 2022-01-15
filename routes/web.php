@@ -42,7 +42,6 @@ Route::get('adminPanel/authors', [AdminPanelController::class, 'getAuthors'])->m
 Route::get('adminPanel/publishers', [AdminPanelController::class, 'getPublishers'])->middleware('admin');
 Route::get('adminPanel/missingBooks', [MissingBookController::class, 'getMissingBooks'])->middleware('admin');
 
-
 Route::get('adminPanel/users/delete/{id}', [AdminPanelController::class, 'deleteUser'])->middleware('admin');
 Route::get('adminPanel/users/edit/{id}', [AdminPanelController::class, 'getUser'])->middleware('admin');
 Route::post('adminPanel/user/edit', [AdminPanelController::class, 'editUser'])->middleware('admin');
@@ -62,7 +61,6 @@ Route::post('adminPanel/publisher/edit', [AdminPanelController::class, 'editPubl
 Route::get('adminPanel/missingBooks/delete/{id}', [MissingBookController::class, 'deleteMissingBook'])->middleware('admin');
 
 /*Inserts */
-
 Route::get('adminPanel/authors/insert', [AdminPanelController::class, 'getInsertAuthorView'])->middleware('admin');
 Route::post('adminPanel/authors/insert', [AdminPanelController::class, 'storeAuthor'])->middleware('admin');
 

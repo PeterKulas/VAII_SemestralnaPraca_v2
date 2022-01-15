@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Publisher;
 use App\Models\Review;
+use finfo;
 use Symfony\Component\Console\Input\Input;
 
 class CatalogController extends Controller
@@ -32,19 +33,20 @@ class CatalogController extends Controller
 
    public function getSingleBookView($id) {
       $book = DB::table('books')->join('authors', "authors.id_author", "=", "books.authorID" )->find($id);
-      return view('userPages/singleBook', ["book" => $book]);
+      $reviews = DB::table('reviews')->join('users', "users.id", "=", "reviews.userID")->join('books', "books.id", "=", "reviews.bookID")->where('reviews.bookID', '=', $id)->get();
+      return view('userPages/singleBook', ["book" => $book, "reviews" => $reviews]);
    }
 
    public function storeReview(Request $request) {
-
+      
       if($request->ajax()) {  
       $review = new Review;
       $review->bookID = $request->bookID;
       $review->userID = $request->userID;
       $review->reviewText = $request->reviewText;
       $review->save();
-      
-      return response()->json($review);   
+         
+      return response()->json($request);   
      }   
    }
 }
