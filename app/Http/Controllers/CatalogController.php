@@ -33,7 +33,8 @@ class CatalogController extends Controller
 
    public function getSingleBookView($id) {
       $book = DB::table('books')->join('authors', "authors.id_author", "=", "books.authorID" )->find($id);
-      $reviews = DB::table('reviews')->join('users', "users.id", "=", "reviews.userID")->join('books', "books.id", "=", "reviews.bookID")->where('reviews.bookID', '=', $id)->get();
+      $reviews = DB::table('reviews')->join('users', "users.id", "=", "reviews.userID")->join('books', "books.id", "=", "reviews.bookID")
+      ->where('reviews.bookID', '=', $id)->orderBy('reviewID', 'desc')->get();
       return view('userPages/singleBook', ["book" => $book, "reviews" => $reviews]);
    }
 
