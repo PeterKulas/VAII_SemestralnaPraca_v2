@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Publisher;
+use App\Models\Review;
 use Symfony\Component\Console\Input\Input;
 
 class CatalogController extends Controller
@@ -16,7 +17,7 @@ class CatalogController extends Controller
    }
 
    public function getCatalogSelected(Request $request) {
-
+   
       if($request->ajax()) {
          $books = Book::where('publisherID','=',$request->selectedOption)->join('authors', "authors.id_author", "=", "books.authorID" )->get();
          
@@ -34,4 +35,16 @@ class CatalogController extends Controller
       return view('userPages/singleBook', ["book" => $book]);
    }
 
+   public function storeReview(Request $request) {
+
+      if($request->ajax()) {  
+      $review = new Review;
+      $review->bookID = $request->bookID;
+      $review->userID = $request->userID;
+      $review->reviewText = $request->reviewText;
+      $review->save();
+      
+      return response()->json($review);   
+     }   
+   }
 }
