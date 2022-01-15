@@ -31,6 +31,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-7">
+                    <div class="title"> Popis: </div>
                     <p>{{ $book->description }}</p>
                 </div>
             </div>
@@ -42,8 +43,10 @@
                 <div class=" form-group">
                     <input type="hidden" value="{{ $book->id }}" id="bookID" name="bookID" readonly />
                     <input type="hidden" value="{{ auth()->user()->id }}" id="userID" name="userID" readonly>
-                    <input type="hidden" value="{{ auth()->user()->firstname }}" id="reviewFirstname" name="reviewFirstname" readonly>
-                    <input type="hidden" value="{{ auth()->user()->lastname }}" id="reviewLastname" name="reviewLastname" readonly>
+                    <input type="hidden" value="{{ auth()->user()->firstname }}" id="reviewFirstname"
+                        name="reviewFirstname" readonly>
+                    <input type="hidden" value="{{ auth()->user()->lastname }}" id="reviewLastname"
+                        name="reviewLastname" readonly>
                     <textarea class="form-control" name="reviewArea" id="reviewArea" rows="3"
                         placeholder="Napíš recenziu.." required></textarea>
                 </div>
