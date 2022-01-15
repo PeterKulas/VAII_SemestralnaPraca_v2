@@ -3,6 +3,7 @@
 @section('title', 'Prihlásenie')
 
 @section('content')
+<x-messages.error-login />
 
 <div class="container login-container ">
     <div class="row justify-content-center">
