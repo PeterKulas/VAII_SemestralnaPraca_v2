@@ -1,6 +1,6 @@
 @extends('layouts.editPage')
 
-@section('title', 'Uprava')
+@section('title', 'Vloženie autora')
 
 @section('content')
 

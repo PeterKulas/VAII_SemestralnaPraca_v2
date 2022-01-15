@@ -10,7 +10,6 @@
     <div class="row justify-content-center">
         <div class="col-md-4 login-form">
             <h3>Pridajte knihu</h3>
-            <!-- TODO form -->
             <form method="POST" action="/missingbook">
                 @csrf
 
@@ -18,17 +17,17 @@
                     <input type="text" name='title' class="form-control" placeholder="Názov knihy:" required />
                 </div>
 
-                <!-- @error('email')
+                @error('title')
                 <p class="error"> {{ $message }}</p>
-                @enderror -->
+                @enderror
 
                 <div class="form-group">
                     <input type="text" name='author' class="form-control" placeholder="Autor knihy:" required />
                 </div>
 
-                <!-- @error('password')
+                @error('author')
                 <p class="error"> {{ $message }}</p>
-                @enderror -->
+                @enderror
 
                 <div class="form-group">
                     <button type="submit" class="btnSubmit">Odoslať</button>

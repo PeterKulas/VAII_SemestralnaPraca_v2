@@ -21,7 +21,13 @@
                     <label for="publisherName">Názov:</label>
                     <input id="inputEditPublisherName" type="text" id="publisherName" name="publisherName"
                         class="form-control" value="{{ $publisher->publisher}}">
-                </div><br>
+                </div>
+
+                @error('publisherName')
+                <p class="error"> {{ $message }}</p>
+                @enderror
+
+                <br>
                 <div class="form-group">
                     <button type="submit" class="btnSubmit">Uložiť zmeny</button>
                 </div>

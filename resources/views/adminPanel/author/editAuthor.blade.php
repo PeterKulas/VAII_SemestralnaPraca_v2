@@ -23,11 +23,22 @@
                     <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname" class="form-control"
                         value="{{ $author->firstname}}">
                 </div>
+
+                @error('Firstname')
+                <p class="error"> {{ $message }}</p>
+                @enderror
+
                 <div class="form-group">
                     <label for="Lastname">Priezvisko:</label>
                     <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" class="form-control"
                         value="{{ $author->lastname}}">
-                </div><br>
+                </div>
+
+                @error('Lastname')
+                <p class="error"> {{ $message }}</p>
+                @enderror
+
+                <br>
                 <div class="form-group">
                     <button type="submit" class="btnSubmit">Uložiť zmeny</button>
                 </div>

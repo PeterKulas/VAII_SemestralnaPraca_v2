@@ -24,14 +24,19 @@ class MissingBookController extends Controller
 
     public function storeBook(Request $request) {     
 
-        //TODO Validation
-        
-        /*
         $request->validate([
-        'Firstname' => ['required', 'min:2', "max:255"],
-        'Lastname' => ['required', 'min:2', "max:255"]
+        'title' => ['required', 'min:3', "max:255"],
+        'autor' => ['required', 'min:3', "max:255"]
+        ],
+        [   
+            'title.required'    => 'Nemôžes nechať prázdne pole.',
+            'title.min'    => 'Názov knihy musí obsahovať minimálne 3 písmena.',
+            'title.max'    => 'Názov knihy nesmie byť dlhší ako 255 znakov.',
+            'autor.required'    => 'Nemôžes nechať prázdne pole.',
+            'autor.min'    => 'Meno autora obsahovať minimálne 3 písmena.',
+            'autor.max'    => 'Meno autora nesmie byť dlhší ako 255 znakov.',
         ]);
-        */
+        
        $data = $request->input();
         
        $book = new MissingBook;
@@ -40,7 +45,6 @@ class MissingBookController extends Controller
 
        $book->save();
        session()->flash('success', 'Žiadosť evidujeme, pokúsime sa pridať knihu čo najskôr!');
-
        return view("userPages/missingBook");
     }
 }

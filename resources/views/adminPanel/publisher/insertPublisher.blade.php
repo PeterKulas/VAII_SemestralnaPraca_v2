@@ -1,6 +1,6 @@
 @extends('layouts.editPage')
 
-@section('title', 'Uprava')
+@section('title', 'Vloženie vydavateľstva')
 
 @section('content')
 
@@ -14,16 +14,15 @@
 
                 <div class=" form-group">
                     <input id="inputEditPublisherName" type="text" id="publisherName" name="publisherName"
-                        class="form-control" placeholder="Meno:" required>
+                        class="form-control" placeholder="Názov vydavateľstva:" required>
                 </div><br>
 
-                @error('Firstname')
+                @error('publisherName')
                 <p class="error"> {{ $message }}</p>
                 @enderror
 
-
                 <div class="form-group">
-                    <button type="submit" class="btnSubmit">Vložiť autora</button>
+                    <button type="submit" class="btnSubmit">Vložiť vydavateľstvo</button>
                 </div>
             </form>
         </div>

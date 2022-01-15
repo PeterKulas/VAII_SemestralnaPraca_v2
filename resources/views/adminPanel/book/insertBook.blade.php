@@ -1,6 +1,6 @@
 @extends('layouts.editPage')
 
-@section('title', 'Uprava')
+@section('title', 'Vloženie knihy')
 
 @section('content')
 
@@ -20,9 +20,9 @@
                 <p class="error"> {{ $message }}</p>
                 @enderror
 
-                <div class=" form-group">
-                    <input type="text" id="authorID" name="authorID" class="form-control" placeholder="ID autora:"
-                        required>
+                <div class="form-group">
+                    <input type="number" min="1" id="authorID" name="authorID" class="form-control"
+                        placeholder="ID autora:" required>
                 </div><br>
 
                 @error('authorID')
@@ -30,8 +30,17 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="text" id="rating" name="rating" class="form-control" placeholder="Hodnotenie:"
-                        required>
+                    <input type="number" min="1" id="publisherID" name="publisherID" class="form-control"
+                        placeholder="ID autora:" required>
+                </div><br>
+
+                @error('publisherID')
+                <p class="error"> {{ $message }}</p>
+                @enderror
+
+                <div class="form-group">
+                    <input type="number" step="0.01" min="0" id="rating" name="rating" class="form-control"
+                        placeholder="Hodnotenie:" required>
                 </div><br>
 
                 @error('rating')
@@ -39,7 +48,8 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="text" id="ISBN" name="ISBN" class="form-control" placeholder="ISBN:" required>
+                    <input type="number" min="0" id="ISBN" name="ISBN" class="form-control" placeholder="ISBN:"
+                        required>
                 </div><br>
 
                 @error('ISBN')
@@ -47,7 +57,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="text" id="publication_year" name="publication_year" class="form-control"
+                    <input type="number" min="1" id="publication_year" name="publication_year" class="form-control"
                         placeholder="Rok vydania:" required>
                 </div><br>
 
@@ -56,7 +66,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <textarea name='description' placeholder="Popis: " rows=" 5" cols="60"> </textarea>
+                    <textarea name='description' placeholder="Popis: " rows=" 5" cols="60" required> </textarea>
                 </div><br>
 
                 @error('description')
@@ -64,10 +74,11 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="text" id="img" name="img" class="form-control" placeholder="Adresa obrázka:" required>
+                    <input type="text" name="img" id="img" name="img" class="form-control" placeholder="Adresa obrázka:"
+                        required>
                 </div><br>
 
-                @error('description')
+                @error('img')
                 <p class="error"> {{ $message }}</p>
                 @enderror
 
