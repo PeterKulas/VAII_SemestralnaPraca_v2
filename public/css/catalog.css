@@ -58,6 +58,7 @@ h5 {
 
 .singleBook-img {
     width: 200px;
+    border: 2px solid var(--black-color);
 }
 
 .title {
@@ -66,8 +67,9 @@ h5 {
 
 #review-container {
     background-color: var(--main-text-color-white);
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .review {
