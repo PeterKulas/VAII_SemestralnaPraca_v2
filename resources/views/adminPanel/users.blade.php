@@ -24,7 +24,7 @@
         <tbody>
             @foreach($users as $user)
             <tr>
-                <td scope="row">{{ $user->id }} </td>
+                <td> {{ $user->id }} </td>
                 <td> {{ $user->firstname }} </td>
                 <td> {{ $user->lastname }} </td>
                 <td> {{ substr($user->password, 0, 10) }}... </td>

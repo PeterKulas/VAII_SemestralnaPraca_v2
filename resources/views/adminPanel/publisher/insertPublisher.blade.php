@@ -12,9 +12,9 @@
             <form method="POST" action="/adminPanel/publishers/insert">
                 @csrf
 
-                <div class=" form-group">
-                    <input id="inputEditPublisherName" type="text" id="publisherName" name="publisherName"
-                        class="form-control" placeholder="Názov vydavateľstva:" required>
+                <div class="form-group">
+                    <input id="inputEditPublisherName" type="text" name="publisherName" class="form-control"
+                        placeholder="Názov vydavateľstva:" required>
                 </div><br>
 
                 @error('publisherName')
@@ -28,3 +28,4 @@
         </div>
     </div>
 </div>
+@endsection

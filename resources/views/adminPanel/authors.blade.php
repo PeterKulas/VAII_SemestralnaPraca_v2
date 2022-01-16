@@ -22,7 +22,7 @@
         <tbody>
             @foreach($authors as $author)
             <tr>
-                <td scope="row">{{ $author->id_author }} </td>
+                <td> {{ $author->id_author }} </td>
                 <td> {{ $author->firstname }} </td>
                 <td> {{ $author->lastname }} </td>
                 <td>

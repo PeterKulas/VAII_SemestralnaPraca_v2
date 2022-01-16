@@ -14,13 +14,13 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="id">ID:</label>
+                    <label>ID:</label>
                     <input type="text" name='id' class="form-control" value="{{ $author->id_author}}" readonly
                         required />
                 </div>
                 <div class="form-group">
-                    <label for="Firstname">Meno:</label>
-                    <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname" class="form-control"
+                    <label>Meno:</label>
+                    <input id="inputEditFirstName" type="text" name="Firstname" class="form-control"
                         value="{{ $author->firstname}}">
                 </div>
 
@@ -29,8 +29,8 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="Lastname">Priezvisko:</label>
-                    <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" class="form-control"
+                    <label>Priezvisko:</label>
+                    <input id="inputEditLastName" type="text" name="Lastname" class="form-control"
                         value="{{ $author->lastname}}">
                 </div>
 
@@ -46,3 +46,4 @@
         </div>
     </div>
 </div>
+@endsection

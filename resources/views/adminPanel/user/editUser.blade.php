@@ -13,12 +13,12 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="ID">ID:</label>
+                    <label>ID:</label>
                     <input class="form-control" type="text" id="ID" name="ID" value="{{ $user->id}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Firstname">Meno:</label>
-                    <input class="form-control" id="inputEditFirstName" type="text" id="firstname" name="firstname"
+                    <label>Meno:</label>
+                    <input class="form-control" id="inputEditFirstName" type="text" name="firstname"
                         value="{{ $user->firstname}}">
                 </div>
 
@@ -27,8 +27,8 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="Lastname">Priezvisko:</label>
-                    <input class="form-control" id="inputEditLastName" type="text" id="lastname" name="lastname"
+                    <label>Priezvisko:</label>
+                    <input class="form-control" id="inputEditLastName" type="text" name="lastname"
                         value="{{ $user->lastname}}">
                 </div>
 
@@ -37,9 +37,8 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for=" Email">Email:</label>
-                    <input class="form-control" id="inputEditEmail" type="email" id="email" name="email"
-                        value="{{ $user->email}}">
+                    <label>Email:</label>
+                    <input class="form-control" id="inputEditEmail" type="email" name="email" value="{{ $user->email}}">
                 </div>
 
                 @error('email')
@@ -54,3 +53,4 @@
         </div>
     </div>
 </div>
+@endsection

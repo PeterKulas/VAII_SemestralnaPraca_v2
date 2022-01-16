@@ -13,14 +13,14 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="id">ID:</label>
+                    <label>ID:</label>
                     <input type="text" name='id' class="form-control" value="{{ $publisher->publisherID}}" readonly
                         required />
                 </div>
                 <div class="form-group">
-                    <label for="publisherName">Názov:</label>
-                    <input id="inputEditPublisherName" type="text" id="publisherName" name="publisherName"
-                        class="form-control" value="{{ $publisher->publisher}}">
+                    <label>Názov:</label>
+                    <input id="inputEditPublisherName" type="text" name="publisherName" class="form-control"
+                        value="{{ $publisher->publisher}}">
                 </div>
 
                 @error('publisherName')
@@ -35,3 +35,4 @@
         </div>
     </div>
 </div>
+@endsection

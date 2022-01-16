@@ -66,7 +66,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <textarea name='description' placeholder="Popis: " rows=" 5" cols="60" required> </textarea>
+                    <textarea name='description' placeholder="Popis: " rows="5" cols="60" required> </textarea>
                 </div><br>
 
                 @error('description')
@@ -74,8 +74,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="text" name="img" id="img" name="img" class="form-control" placeholder="Adresa obrázka:"
-                        required>
+                    <input type="text" id="img" name="img" class="form-control" placeholder="Adresa obrázka:" required>
                 </div><br>
 
                 @error('img')
@@ -89,3 +88,4 @@
         </div>
     </div>
 </div>
+@endsection

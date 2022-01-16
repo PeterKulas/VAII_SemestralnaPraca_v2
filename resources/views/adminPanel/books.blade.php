@@ -28,7 +28,7 @@
         <tbody>
             @foreach($books as $book)
             <tr>
-                <td scope="row">{{ $book->id }} </td>
+                <td> {{ $book->id }} </td>
                 <td> {{ $book->title }} </td>
                 <td> {{ $book->firstname }} {{ $book->lastname }} </td>
                 <td> {{ $book->rating }} </td>

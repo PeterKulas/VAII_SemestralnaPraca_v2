@@ -12,8 +12,8 @@
             <form method="POST" action="/adminPanel/authors/insert">
                 @csrf
                 <div class=" form-group">
-                    <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname" class="form-control"
-                        placeholder="Meno:" required>
+                    <input id="inputEditFirstName" type="text" name="Firstname" class="form-control" placeholder="Meno:"
+                        required>
                 </div><br>
 
                 @error('Firstname')
@@ -21,7 +21,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <input id="inputEditLastName" type="text" id="Lastname" name="Lastname" class="form-control"
+                    <input id="inputEditLastName" type="text" name="Lastname" class="form-control"
                         placeholder="Priezvisko:" required>
                 </div><br>
 
@@ -36,3 +36,4 @@
         </div>
     </div>
 </div>
+@endsection

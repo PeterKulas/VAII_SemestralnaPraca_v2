@@ -16,12 +16,13 @@
                 <th scope="col">#</th>
                 <th scope="col">Názov knihy</th>
                 <th scope="col">Autor</th>
+                <th scope="col">Odstrániť</th>
             </tr>
         </thead>
         <tbody>
             @foreach($missingBooks as $missingBook)
             <tr>
-                <td scope="row">{{ $missingBook->id }} </td>
+                <td> {{ $missingBook->id }} </td>
                 <td> {{ $missingBook->title }} </td>
                 <td> {{ $missingBook->author }} </td>
                 <td>

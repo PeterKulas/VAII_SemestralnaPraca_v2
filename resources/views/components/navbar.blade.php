@@ -30,21 +30,25 @@
                         @endguest
 
                         @auth
-                        <div class="logout">
-                            <span class="welcomeMessage">Vitaj, {{ auth()->user()->firstname }} !</span>
+                        <li>
                             <div class="logout">
-                                <form method='POST' action="/logout">
-                                    @csrf
-                                    <button type="submit" class="btn btn-outline-light" data-bs-toggle="modal"
-                                        data-bs-target="#loginModal">Odhlásiť sa</button>
-                                </form>
+                                <span class="welcomeMessage">Vitaj, {{ auth()->user()->firstname }} !</span>
+                                <div class="logout">
+                                    <form method='POST' action="/logout">
+                                        @csrf
+                                        <button type="submit" class="btn btn-outline-light" data-bs-toggle="modal"
+                                            data-bs-target="#loginModal">Odhlásiť sa</button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
+                        </li>
                         @else
                         <li>
                             <div class="login">
-                                <a href="login"><button type="button" class="btn btn-outline-light"
-                                        data-bs-toggle="modal" data-bs-target="#loginModal">Prihlásiť sa</button></a>
+                                <form action="login">
+                                    <button type="submit" class="btn btn-outline-light" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">Prihlásiť sa</button>
+                                </form>
                                 <span><a href="register">Nemáš vytvorený učet? Registruj sa!</a></span>
                             </div>
                         </li>

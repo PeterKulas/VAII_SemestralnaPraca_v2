@@ -41,12 +41,12 @@
             <form id="review-form" method="Post">
                 @csrf
                 <div class=" form-group">
-                    <input type="hidden" value="{{ $book->id }}" id="bookID" name="bookID" readonly />
-                    <input type="hidden" value="{{ auth()->user()->id }}" id="userID" name="userID" readonly>
+                    <input type="hidden" value="{{ $book->id }}" id="bookID" name="bookID" />
+                    <input type="hidden" value="{{ auth()->user()->id }}" id="userID" name="userID">
                     <input type="hidden" value="{{ auth()->user()->firstname }}" id="reviewFirstname"
-                        name="reviewFirstname" readonly>
+                        name="reviewFirstname">
                     <input type="hidden" value="{{ auth()->user()->lastname }}" id="reviewLastname"
-                        name="reviewLastname" readonly>
+                        name="reviewLastname">
                     <textarea class="form-control" name="reviewArea" id="reviewArea" rows="3"
                         placeholder="Napíš recenziu.." required></textarea>
                 </div>
@@ -67,6 +67,5 @@
         </div>
 
     </div>
-</div>
 </div>
 @endsection

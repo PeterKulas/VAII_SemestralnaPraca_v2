@@ -15,12 +15,13 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Názov</th>
+                <th scope="col">Operácia</th>
             </tr>
         </thead>
         <tbody>
             @foreach($publishers as $publisher)
             <tr>
-                <td scope="row">{{ $publisher->publisherID }} </td>
+                <td> {{ $publisher->publisherID }} </td>
                 <td> {{ $publisher->publisher }} </td>
                 <td>
                     <a class="operation edit" href="publishers/edit/{{ $publisher->publisherID  }} "><i

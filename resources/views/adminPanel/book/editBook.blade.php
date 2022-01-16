@@ -14,11 +14,11 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="id">ID:</label>
+                    <label>ID:</label>
                     <input type="number" name='id' class="form-control" value="{{ $book->id}}" readonly required />
                 </div>
                 <div class="form-group">
-                    <label for="title">Názov:</label>
+                    <label>Názov:</label>
                     <input type="text" name='title' class="form-control" value="{{ $book->title}}" required />
                 </div>
 
@@ -27,7 +27,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="autor">Autor:</label>
+                    <label>Autor:</label>
                     <input type="text" name='autor' class="form-control" value="{{ $book->authorID}}" required />
                 </div>
 
@@ -36,7 +36,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="Rating">Vydavateľstvo:</label>
+                    <label>Vydavateľstvo:</label>
                     <input type="number" name='publisherID' class="form-control" value="{{ $book->publisherID}}"
                         required />
                 </div>
@@ -46,7 +46,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="Rating">Rating:</label>
+                    <label>Rating:</label>
                     <input type="number" step="0.01" min="0" max="5" name='rating' class="form-control"
                         value="{{ $book->rating }}" required />
                 </div>
@@ -56,7 +56,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="ISBN">ISBN:</label>
+                    <label>ISBN:</label>
                     <input type="number" name='ISBN' class="form-control" value="{{ $book->ISBN}}" readonly required />
                 </div>
 
@@ -65,7 +65,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="publication_year">Rok vydania:</label>
+                    <label>Rok vydania:</label>
                     <input type="number" name='publication_year' class="form-control"
                         value="{{ $book->publication_year}}" required />
                 </div>
@@ -75,7 +75,7 @@
                 @enderror
 
                 <div class="form-group">
-                    <label for="description">Popis:</label>
+                    <label>Popis:</label>
                     <textarea name='description' rows="5" cols="60" required>
                         {{ $book->description}}
                         </textarea>
@@ -93,3 +93,4 @@
         </div>
     </div>
 </div>
+@endsection
