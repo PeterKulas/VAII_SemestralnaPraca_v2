@@ -41,7 +41,7 @@ class MissingBookController extends Controller
         
        $book = new MissingBook;
        $book->title = $data['title'];
-       $book->author = $data['author'];
+       $book->author = $data['autor'];
 
        $book->save();
        session()->flash('success', 'Žiadosť evidujeme, pokúsime sa pridať knihu čo najskôr!');

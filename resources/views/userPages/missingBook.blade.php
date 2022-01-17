@@ -22,10 +22,10 @@
                 @enderror
 
                 <div class="form-group">
-                    <input type="text" name='author' class="form-control" placeholder="Autor knihy:" required />
+                    <input type="text" name='autor' class="form-control" placeholder="Autor knihy:" required />
                 </div>
 
-                @error('author')
+                @error('autor')
                 <p class="error"> {{ $message }}</p>
                 @enderror
 
