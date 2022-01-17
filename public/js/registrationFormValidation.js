@@ -13,65 +13,76 @@ const inputEmail = document.getElementById("inputEmail");
 
 /*Registration */
 
-inputFirstName.addEventListener("input", function () {
-    validateName(inputFirstName, firstnameValidation);
-});
+if (inputFirstName) {
+    inputFirstName.addEventListener("input", function () {
+        validateName(inputFirstName, firstnameValidation);
+    });
+}
 
-inputLastName.addEventListener("input", function () {
-    validateName(inputLastName, lastnameValidation);
-});
+if (inputLastName) {
+    inputLastName.addEventListener("input", function () {
+        validateName(inputLastName, lastnameValidation);
+    });
+}
 
-password.addEventListener("input", function () {
-    if (!checkLength(0)) {
-        paragraphPass.classList.add("hidden");
-    }
-    if (checkLength(0)) {
-        paragraphPass.classList.remove("hidden");
-        strengthOfPassword.innerHTML = "slabe";
-        strengthOfPassword.style.color = "red";
-    }
-    if (checkLength(7) && validatePassword()) {
-        strengthOfPassword.innerHTML = "dobre";
-        strengthOfPassword.style.color = "orange";
-    }
-    if (checkLength(9) && validatePassword()) {
-        strengthOfPassword.innerHTML = "vyborne";
-        strengthOfPassword.style.color = "green";
-    }
-});
+if (password) {
+    password.addEventListener("input", function () {
+        if (!checkLength(0)) {
+            paragraphPass.classList.add("hidden");
+        }
+        if (checkLength(0)) {
+            paragraphPass.classList.remove("hidden");
+            strengthOfPassword.innerHTML = "slabe";
+            strengthOfPassword.style.color = "red";
+        }
+        if (checkLength(7) && validatePassword()) {
+            strengthOfPassword.innerHTML = "dobre";
+            strengthOfPassword.style.color = "orange";
+        }
+        if (checkLength(9) && validatePassword()) {
+            strengthOfPassword.innerHTML = "vyborne";
+            strengthOfPassword.style.color = "green";
+        }
+    });
+}
 
-repassword.addEventListener("input", function () {
-    passMsg.classList.remove("hidden");
-    if (samePasswords()) {
-        repassword.style.border = "5px solid #90EE90";
-        passMsg.innerHTML = "Hesla su zhodné.";
+if (repassword) {
+    repassword.addEventListener("input", function () {
+        passMsg.classList.remove("hidden");
+        if (samePasswords()) {
+            repassword.style.border = "5px solid #90EE90";
+            passMsg.innerHTML = "Hesla su zhodné.";
 
-        setTimeout(function () {
-            document.getElementById("passMsg").innerHTML = "";
-            repassword.style.border = "0px solid #90EE90";
-            passMsg.classList.add("hidden");
-        }, 2000);
-    } else {
-        document.getElementById("passMsg").innerHTML = "Hesla sa nezhodujú.";
-        repassword.style.border = "5px solid #F08080";
-    }
-});
+            setTimeout(function () {
+                document.getElementById("passMsg").innerHTML = "";
+                repassword.style.border = "0px solid #90EE90";
+                passMsg.classList.add("hidden");
+            }, 2000);
+        } else {
+            document.getElementById("passMsg").innerHTML =
+                "Hesla sa nezhodujú.";
+            repassword.style.border = "5px solid #F08080";
+        }
+    });
+}
 
-inputEmail.addEventListener("input", function () {
-    console.log("mail");
-    if (validateEmail(inputEmail)) {
-        setInnerHtml(emailMsg, "Spravny format emailu");
-        inputEmail.style.border = "5px solid #90EE90";
+if (inputEmail) {
+    inputEmail.addEventListener("input", function () {
+        console.log("mail");
+        if (validateEmail(inputEmail)) {
+            setInnerHtml(emailMsg, "Spravny format emailu");
+            inputEmail.style.border = "5px solid #90EE90";
 
-        setTimeout(function () {
-            setInnerHtml(emailMsg, " ");
-            inputEmail.style.border = "0px solid #90EE90";
-        }, 2000);
-    } else {
-        inputEmail.style.border = "5px solid #F08080";
-        setInnerHtml(emailMsg, "Format: text@text.text");
-    }
-});
+            setTimeout(function () {
+                setInnerHtml(emailMsg, " ");
+                inputEmail.style.border = "0px solid #90EE90";
+            }, 2000);
+        } else {
+            inputEmail.style.border = "5px solid #F08080";
+            setInnerHtml(emailMsg, "Format: text@text.text");
+        }
+    });
+}
 
 const samePasswords = function () {
     if (password.value === repassword.value) {
