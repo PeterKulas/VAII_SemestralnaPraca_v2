@@ -1,15 +1,10 @@
-.maincontent {
-    padding-top: 50px;
-    padding-left: 20%;
+.adminPanel-container {
+    display: flex;
 }
 
 .sidebar {
     background-color: var(--dark-blue);
-    position: fixed;
-    top: 0;
-    left: 0;
     min-height: 100vh;
-    z-index: 1;
 }
 
 .sidebar h4 {
